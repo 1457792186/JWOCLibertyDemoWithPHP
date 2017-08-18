@@ -22,6 +22,8 @@
 		181B901F1F46D39300A4C971 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90131F46D39300A4C971 /* TZPhotoPreviewController.m */; };
 		181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90151F46D39300A4C971 /* TZVideoPlayerController.m */; };
 		181B90211F46D39300A4C971 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90171F46D39300A4C971 /* UIView+Layout.m */; };
+		181B90251F46D7F200A4C971 /* BBSDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */; };
+		181B90261F46D7F200A4C971 /* BBSDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */; };
 		18C2353E1F42E56100553864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2353D1F42E56100553864 /* main.m */; };
 		18C235411F42E56100553864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235401F42E56100553864 /* AppDelegate.m */; };
 		18C235441F42E56100553864 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235431F42E56100553864 /* ViewController.m */; };
@@ -68,6 +70,10 @@
 		181B90151F46D39300A4C971 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
 		181B90161F46D39300A4C971 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		181B90171F46D39300A4C971 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		181B90221F46D7F200A4C971 /* BBSDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadViewController.h; sourceTree = "<group>"; };
+		181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadViewController.m; sourceTree = "<group>"; };
+		181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadViewController.xib; sourceTree = "<group>"; };
+		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
 		18C235391F42E56100553864 /* NxhTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2353D1F42E56100553864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18C2353F1F42E56100553864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 				181B8FF81F46BE7800A4C971 /* BBSURLSessionViewController.m */,
 				181B8FFA1F46C5C400A4C971 /* BBSMyURLSessionViewController.h */,
 				181B8FFB1F46C5C400A4C971 /* BBSMyURLSessionViewController.m */,
+				181B90221F46D7F200A4C971 /* BBSDownloadViewController.h */,
+				181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */,
+				181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */,
 			);
 			path = NxhTest;
 			sourceTree = "<group>";
@@ -201,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				18C2353D1F42E56100553864 /* main.m */,
+				181B90271F46D84B00A4C971 /* JWTestPCH.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -300,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181B90261F46D7F200A4C971 /* BBSDownloadViewController.xib in Resources */,
 				181B901B1F46D39300A4C971 /* TZImagePickerController.bundle in Resources */,
 				18C2354C1F42E56100553864 /* LaunchScreen.storyboard in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
@@ -328,6 +339,7 @@
 				181B8FFC1F46C5C400A4C971 /* BBSMyURLSessionViewController.m in Sources */,
 				181B901E1F46D39300A4C971 /* TZPhotoPreviewCell.m in Sources */,
 				181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */,
+				181B90251F46D7F200A4C971 /* BBSDownloadViewController.m in Sources */,
 				18C2355A1F42FAEC00553864 /* UIImage+scale.m in Sources */,
 				181B901D1F46D39300A4C971 /* TZPhotoPickerController.m in Sources */,
 				18C235701F430B1A00553864 /* LYSToolObject.m in Sources */,
@@ -452,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;
@@ -463,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;

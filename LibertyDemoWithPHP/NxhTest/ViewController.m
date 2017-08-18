@@ -16,9 +16,7 @@
 #import "BBSWeightChangeVC.h"
 #import "BBSURLSessionViewController.h"
 #import "BBSMyURLSessionViewController.h"
-
-#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
-#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#import "BBSDownloadViewController.h"
 
 @interface ViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -37,8 +35,6 @@
     
     _bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     [_bgImageView setUserInteractionEnabled:YES];
-//    UITapGestureRecognizer * tapAction = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goChart)];
-//    [_bgImageView addGestureRecognizer:tapAction];
     [self.view addSubview:_bgImageView];
     
     _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"背景图毛玻璃"]];
@@ -54,11 +50,6 @@
     _carousel.backgroundColor = [UIColor clearColor];
     _carousel.type = iCarouselTypeCoverFlow2;
     [self.view addSubview:_carousel];
-}
-
-- (void)goChart{
-    BBSWeightChangeVC * vc = [[BBSWeightChangeVC alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - iCarouselDataSource
@@ -115,7 +106,8 @@
     switch (index) {
         case 0:
         {//图表绘制
-            [self goChart];
+            BBSWeightChangeVC * vc = [[BBSWeightChangeVC alloc]init];
+            [self presentViewController:vc animated:YES completion:nil];
         }
             break;
         case 1:
@@ -147,6 +139,10 @@
             [self presentViewController:imagePickerVC animated:YES completion:nil];
         }
             break;
+        case 4:
+        {//文件下载断点续传
+            
+        }
         default:
         {//背景图毛玻璃,只执行一次
             if (_dataArray.count > 0) {
