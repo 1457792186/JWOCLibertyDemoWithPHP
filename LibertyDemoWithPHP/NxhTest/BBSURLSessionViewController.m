@@ -23,7 +23,7 @@
     [super viewDidLoad];
     //urlSession链接
     
-    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     _dataLabel.numberOfLines = 0;
     _dataLabel.textColor = [UIColor blackColor];
     [self.view addSubview:_dataLabel];
