@@ -22,8 +22,14 @@
 		181B901F1F46D39300A4C971 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90131F46D39300A4C971 /* TZPhotoPreviewController.m */; };
 		181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90151F46D39300A4C971 /* TZVideoPlayerController.m */; };
 		181B90211F46D39300A4C971 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90171F46D39300A4C971 /* UIView+Layout.m */; };
-		181B90251F46D7F200A4C971 /* BBSDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */; };
-		181B90261F46D7F200A4C971 /* BBSDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */; };
+		182BEAAC1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAA11F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m */; };
+		182BEAAD1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAA21F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib */; };
+		182BEAAE1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAA41F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m */; };
+		182BEAAF1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAA51F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib */; };
+		182BEAB01F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAA71F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m */; };
+		182BEAB11F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAA81F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib */; };
+		182BEAB21F46EB7B00FD6ABE /* BBSDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAAA1F46EB7B00FD6ABE /* BBSDownloadViewController.m */; };
+		182BEAB31F46EB7B00FD6ABE /* BBSDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAAB1F46EB7B00FD6ABE /* BBSDownloadViewController.xib */; };
 		18C2353E1F42E56100553864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2353D1F42E56100553864 /* main.m */; };
 		18C235411F42E56100553864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235401F42E56100553864 /* AppDelegate.m */; };
 		18C235441F42E56100553864 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235431F42E56100553864 /* ViewController.m */; };
@@ -70,10 +76,19 @@
 		181B90151F46D39300A4C971 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
 		181B90161F46D39300A4C971 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		181B90171F46D39300A4C971 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		181B90221F46D7F200A4C971 /* BBSDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadViewController.h; sourceTree = "<group>"; };
-		181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadViewController.m; sourceTree = "<group>"; };
-		181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadViewController.xib; sourceTree = "<group>"; };
 		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
+		182BEAA01F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadedTableViewCell.h; sourceTree = "<group>"; };
+		182BEAA11F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadedTableViewCell.m; sourceTree = "<group>"; };
+		182BEAA21F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadedTableViewCell.xib; sourceTree = "<group>"; };
+		182BEAA31F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadingTableViewCell.h; sourceTree = "<group>"; };
+		182BEAA41F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadingTableViewCell.m; sourceTree = "<group>"; };
+		182BEAA51F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadingTableViewCell.xib; sourceTree = "<group>"; };
+		182BEAA61F46EB7B00FD6ABE /* BBSDownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadTableViewCell.h; sourceTree = "<group>"; };
+		182BEAA71F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadTableViewCell.m; sourceTree = "<group>"; };
+		182BEAA81F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadTableViewCell.xib; sourceTree = "<group>"; };
+		182BEAA91F46EB7B00FD6ABE /* BBSDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadViewController.h; sourceTree = "<group>"; };
+		182BEAAA1F46EB7B00FD6ABE /* BBSDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadViewController.m; sourceTree = "<group>"; };
+		182BEAAB1F46EB7B00FD6ABE /* BBSDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadViewController.xib; sourceTree = "<group>"; };
 		18C235391F42E56100553864 /* NxhTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2353D1F42E56100553864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18C2353F1F42E56100553864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +175,25 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
+		182BEA9F1F46EB7B00FD6ABE /* BBSDownload */ = {
+			isa = PBXGroup;
+			children = (
+				182BEAA01F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.h */,
+				182BEAA11F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m */,
+				182BEAA21F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib */,
+				182BEAA31F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.h */,
+				182BEAA41F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m */,
+				182BEAA51F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib */,
+				182BEAA61F46EB7B00FD6ABE /* BBSDownloadTableViewCell.h */,
+				182BEAA71F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m */,
+				182BEAA81F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib */,
+				182BEAA91F46EB7B00FD6ABE /* BBSDownloadViewController.h */,
+				182BEAAA1F46EB7B00FD6ABE /* BBSDownloadViewController.m */,
+				182BEAAB1F46EB7B00FD6ABE /* BBSDownloadViewController.xib */,
+			);
+			path = BBSDownload;
+			sourceTree = "<group>";
+		};
 		18C235301F42E56100553864 = {
 			isa = PBXGroup;
 			children = (
@@ -199,9 +233,7 @@
 				181B8FF81F46BE7800A4C971 /* BBSURLSessionViewController.m */,
 				181B8FFA1F46C5C400A4C971 /* BBSMyURLSessionViewController.h */,
 				181B8FFB1F46C5C400A4C971 /* BBSMyURLSessionViewController.m */,
-				181B90221F46D7F200A4C971 /* BBSDownloadViewController.h */,
-				181B90231F46D7F200A4C971 /* BBSDownloadViewController.m */,
-				181B90241F46D7F200A4C971 /* BBSDownloadViewController.xib */,
+				182BEA9F1F46EB7B00FD6ABE /* BBSDownload */,
 			);
 			path = NxhTest;
 			sourceTree = "<group>";
@@ -310,10 +342,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181B90261F46D7F200A4C971 /* BBSDownloadViewController.xib in Resources */,
+				182BEAAF1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib in Resources */,
 				181B901B1F46D39300A4C971 /* TZImagePickerController.bundle in Resources */,
+				182BEAB31F46EB7B00FD6ABE /* BBSDownloadViewController.xib in Resources */,
 				18C2354C1F42E56100553864 /* LaunchScreen.storyboard in Resources */,
+				182BEAAD1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
+				182BEAB11F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,18 +363,21 @@
 				181B90021F46D2C300A4C971 /* ZFDownloadManager.m in Sources */,
 				18C235661F430AC200553864 /* BBSWeightChangeVC.m in Sources */,
 				181B901A1F46D39300A4C971 /* TZImageManager.m in Sources */,
+				182BEAAE1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m in Sources */,
 				181899311F43D5250035FAFA /* UIColor+HexColor.m in Sources */,
+				182BEAB21F46EB7B00FD6ABE /* BBSDownloadViewController.m in Sources */,
 				18C2355D1F42FAFB00553864 /* UIImage+down.m in Sources */,
 				181B90031F46D2C300A4C971 /* ZFSessionModel.m in Sources */,
+				182BEAAC1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m in Sources */,
 				18C235561F42E56F00553864 /* iCarousel.m in Sources */,
 				18C2356E1F430B1A00553864 /* LYSHistogramChart.m in Sources */,
 				181B90191F46D39300A4C971 /* TZAssetModel.m in Sources */,
 				181B901C1F46D39300A4C971 /* TZImagePickerController.m in Sources */,
 				18C235601F42FD0500553864 /* UIImageView+colorGraduallyChange.m in Sources */,
+				182BEAB01F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m in Sources */,
 				181B8FFC1F46C5C400A4C971 /* BBSMyURLSessionViewController.m in Sources */,
 				181B901E1F46D39300A4C971 /* TZPhotoPreviewCell.m in Sources */,
 				181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */,
-				181B90251F46D7F200A4C971 /* BBSDownloadViewController.m in Sources */,
 				18C2355A1F42FAEC00553864 /* UIImage+scale.m in Sources */,
 				181B901D1F46D39300A4C971 /* TZPhotoPickerController.m in Sources */,
 				18C235701F430B1A00553864 /* LYSToolObject.m in Sources */,

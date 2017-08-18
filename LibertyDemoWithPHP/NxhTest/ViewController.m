@@ -49,7 +49,20 @@
     _carousel.delegate = self;
     _carousel.backgroundColor = [UIColor clearColor];
     _carousel.type = iCarouselTypeCoverFlow2;
+    _carousel.centerItemWhenSelected = YES;//选中时居中
+    
     [self.view addSubview:_carousel];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    //翻页墙居中
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSInteger centerIdx = _dataArray.count/2 - 1;
+        _carousel.currentItemIndex = centerIdx>0?centerIdx:0;
+    });
 }
 
 #pragma mark - iCarouselDataSource
@@ -141,8 +154,10 @@
             break;
         case 4:
         {//文件下载断点续传
-            
+            BBSDownloadViewController * downLoadVC = [[BBSDownloadViewController alloc]init];
+            [self presentViewController:downLoadVC animated:YES completion:nil];
         }
+            break;
         default:
         {//背景图毛玻璃,只执行一次
             if (_dataArray.count > 0) {

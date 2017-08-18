@@ -14,7 +14,7 @@
 
 @interface BBSMyURLSessionViewController ()<NSURLSessionDataDelegate>
 
-@property (strong,nonatomic)UILabel * dataLabel;
+@property (strong,nonatomic)UITextView * dataTextView;
 
 @end
 
@@ -23,10 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    _dataLabel.numberOfLines = 0;
-    _dataLabel.textColor = [UIColor blackColor];
-    [self.view addSubview:_dataLabel];
+    _dataTextView = [[UITextView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT/3.f, SCREENWIDTH, SCREENHEIGHT*2/3.f)];
+    _dataTextView.textColor = [UIColor blackColor];
+    _dataTextView.backgroundColor = [UIColor greenColor];
+    _dataTextView.editable = NO;
+    [self.view addSubview:_dataTextView];
     
     //urlSession链接
     [self urlConnection];
@@ -38,7 +39,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"%@",_dataLabel.text);
+        NSLog(@"%@",_dataTextView.text);
     }];
 }
 
@@ -58,7 +59,9 @@
         if (data) {
             //            数据处理
             NSString *jsonstring=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            _dataLabel.text = jsonstring;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _dataTextView.text = [NSString stringWithString:jsonstring];
+            });
             //            json解析
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSLog(@"%@",jsonData);
@@ -89,7 +92,7 @@
         if (data) {
             //            数据处理
             NSString *jsonstring=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            _dataLabel.text = jsonstring;
+//            _dataTextView.text = [NSString stringWithString:jsonstring];
             //            json解析
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSLog(@"%@",jsonData);

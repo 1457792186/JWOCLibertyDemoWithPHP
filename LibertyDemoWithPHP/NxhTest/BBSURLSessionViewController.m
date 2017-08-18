@@ -13,7 +13,7 @@
 
 @interface BBSURLSessionViewController ()<NSURLSessionDataDelegate>
 
-@property (strong,nonatomic)UILabel * dataLabel;
+@property (strong,nonatomic)UITextView * dataTextView;
 
 @end
 
@@ -23,10 +23,11 @@
     [super viewDidLoad];
     //urlSession链接
     
-    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
-    _dataLabel.numberOfLines = 0;
-    _dataLabel.textColor = [UIColor blackColor];
-    [self.view addSubview:_dataLabel];
+    _dataTextView = [[UITextView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT/3.f, SCREENWIDTH, SCREENHEIGHT*2/3.f)];
+    _dataTextView.textColor = [UIColor blackColor];
+    _dataTextView.backgroundColor = [UIColor greenColor];
+    _dataTextView.editable = NO;
+    [self.view addSubview:_dataTextView];
     
     [self urlConnection];
     
@@ -37,7 +38,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"%@",_dataLabel.text);
+        NSLog(@"%@",_dataTextView.text);
     }];
 }
 
@@ -52,12 +53,15 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
 
+    
     // 由于要先对request先行处理,我们通过request初始化task
     NSURLSessionTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
 //            数据处理
             NSString *jsonstring=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            _dataLabel.text = jsonstring;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _dataTextView.text = [NSString stringWithString:jsonstring];
+            });
 //            json解析
 //            NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         }
@@ -86,7 +90,7 @@
         if (data) {
             //            数据处理
             NSString *jsonstring=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            _dataLabel.text = jsonstring;
+//            _dataTextView.text = [NSString stringWithString:jsonstring];
             //            json解析
             //            NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         }
