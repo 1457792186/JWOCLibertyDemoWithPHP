@@ -91,6 +91,7 @@
         imageDown.contentMode =UIViewContentModeScaleAspectFit;
         imageDown.image = image;
         [imageDown changeAlphaWithDirection:kDirectionDown];
+        imageView.transform = CGAffineTransformMakeScale(-1.0, 1.0);
         [view addSubview:imageDown];
         
         label = [[UILabel alloc]initWithFrame:CGRectMake(0, view.frame.size.height/2.f - 15.f, width, 30.f)];
