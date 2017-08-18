@@ -23,16 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _dataLabel.numberOfLines = 0;
+    _dataLabel.textColor = [UIColor blackColor];
+    [self.view addSubview:_dataLabel];
+    
     //urlSession链接
     [self urlConnection];
     
     //urlSession链接配置代理
     [self urlConnectionWithDeledate];
-    
-    _dataLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    _dataLabel.numberOfLines = 0;
-    _dataLabel.textColor = [UIColor blackColor];
-    [self.view addSubview:_dataLabel];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

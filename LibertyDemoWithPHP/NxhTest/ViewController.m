@@ -12,6 +12,7 @@
 #import "UIImage+scale.h"
 #import "UIImageView+colorGraduallyChange.h"
 
+#import "TZImagePickerController.h"
 #import "BBSWeightChangeVC.h"
 #import "BBSURLSessionViewController.h"
 #import "BBSMyURLSessionViewController.h"
@@ -19,7 +20,7 @@
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ViewController ()<iCarouselDataSource, iCarouselDelegate>
+@interface ViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
 @property (strong, nonatomic)iCarousel *carousel;
 @property (strong, nonatomic)NSMutableArray * dataArray;
@@ -40,7 +41,7 @@
 //    [_bgImageView addGestureRecognizer:tapAction];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表",@"网络连接",@"网络连接本地",@"BG_IMG",@"BG_IMG",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<6; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",i]];
@@ -113,20 +114,37 @@
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
     switch (index) {
         case 0:
-        {//前往图标视图
+        {//图表绘制
             [self goChart];
         }
             break;
         case 1:
-        {//NSURLSession连接
+        {//NSURLSession网络连接
             BBSURLSessionViewController * urlVC = [[BBSURLSessionViewController alloc]init];
             [self presentViewController:urlVC animated:YES completion:nil];
         }
             break;
         case 2:
-        {
+        {//NSURLSession连接本地数据库测试PHP学习进程
             BBSMyURLSessionViewController * urlVC = [[BBSMyURLSessionViewController alloc]init];
             [self presentViewController:urlVC animated:YES completion:nil];
+        }
+            break;
+        case 3:
+        {//图片选择器，随机选择一张作为背景图片
+            TZImagePickerController *imagePickerVC = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+            imagePickerVC.allowPickingVideo = NO;
+            [imagePickerVC setDidFinishPickingPhotosHandle:^(NSArray * photos , NSArray * assets,BOOL isSelectOriginalPhoto){
+                if (photos.count>0) {
+                    NSInteger selIndex = arc4random()%photos.count;
+                    while (selIndex>=photos.count) {
+                        selIndex--;
+                    }
+                    _bgImageView.image = photos[selIndex];
+                }
+            }];
+            
+            [self presentViewController:imagePickerVC animated:YES completion:nil];
         }
             break;
         default:
