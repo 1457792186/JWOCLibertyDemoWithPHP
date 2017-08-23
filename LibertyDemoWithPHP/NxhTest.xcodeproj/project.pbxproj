@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		181899311F43D5250035FAFA /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 181899301F43D5250035FAFA /* UIColor+HexColor.m */; };
+		1819493D1F4D883800B2DD0A /* BBSLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819493C1F4D883800B2DD0A /* BBSLabelViewController.m */; };
+		181949521F4D88C900B2DD0A /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819493F1F4D88C900B2DD0A /* LTCharacterDiffResult.swift */; };
+		181949531F4D88C900B2DD0A /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949401F4D88C900B2DD0A /* LTCharacterLimbo.swift */; };
+		181949541F4D88C900B2DD0A /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949411F4D88C900B2DD0A /* LTEasing.swift */; };
+		181949551F4D88C900B2DD0A /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949421F4D88C900B2DD0A /* LTEmitterView.swift */; };
+		181949561F4D88C900B2DD0A /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949431F4D88C900B2DD0A /* LTMorphingEffect.swift */; };
+		181949571F4D88C900B2DD0A /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949441F4D88C900B2DD0A /* LTMorphingLabel+Anvil.swift */; };
+		181949581F4D88C900B2DD0A /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949451F4D88C900B2DD0A /* LTMorphingLabel+Burn.swift */; };
+		181949591F4D88C900B2DD0A /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949461F4D88C900B2DD0A /* LTMorphingLabel+Evaporate.swift */; };
+		1819495A1F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949471F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift */; };
+		1819495B1F4D88C900B2DD0A /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949481F4D88C900B2DD0A /* LTMorphingLabel+Pixelate.swift */; };
+		1819495C1F4D88C900B2DD0A /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949491F4D88C900B2DD0A /* LTMorphingLabel+Sparkle.swift */; };
+		1819495D1F4D88C900B2DD0A /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819494B1F4D88C900B2DD0A /* LTMorphingLabel.swift */; };
+		1819495E1F4D88C900B2DD0A /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819494C1F4D88C900B2DD0A /* LTStringDiffResult.swift */; };
+		1819495F1F4D88C900B2DD0A /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 1819494E1F4D88C900B2DD0A /* Fire.png */; };
+		181949601F4D88C900B2DD0A /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 1819494F1F4D88C900B2DD0A /* Fragment.png */; };
+		181949611F4D88C900B2DD0A /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 181949501F4D88C900B2DD0A /* Smoke.png */; };
+		181949621F4D88C900B2DD0A /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 181949511F4D88C900B2DD0A /* Sparkle.png */; };
+		181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949631F4D8B0A00B2DD0A /* BBSSwift.swift */; };
 		181B8FF91F46BE7800A4C971 /* BBSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B8FF81F46BE7800A4C971 /* BBSURLSessionViewController.m */; };
 		181B8FFC1F46C5C400A4C971 /* BBSMyURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B8FFB1F46C5C400A4C971 /* BBSMyURLSessionViewController.m */; };
 		181B90021F46D2C300A4C971 /* ZFDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B8FFF1F46D2C300A4C971 /* ZFDownloadManager.m */; };
@@ -49,6 +68,27 @@
 /* Begin PBXFileReference section */
 		1818992F1F43D5250035FAFA /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		181899301F43D5250035FAFA /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		1819493B1F4D883800B2DD0A /* BBSLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSLabelViewController.h; sourceTree = "<group>"; };
+		1819493C1F4D883800B2DD0A /* BBSLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSLabelViewController.m; sourceTree = "<group>"; };
+		1819493F1F4D88C900B2DD0A /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		181949401F4D88C900B2DD0A /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		181949411F4D88C900B2DD0A /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		181949421F4D88C900B2DD0A /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		181949431F4D88C900B2DD0A /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		181949441F4D88C900B2DD0A /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		181949451F4D88C900B2DD0A /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		181949461F4D88C900B2DD0A /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		181949471F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		181949481F4D88C900B2DD0A /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		181949491F4D88C900B2DD0A /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		1819494A1F4D88C900B2DD0A /* LTMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMorphingLabel.h; sourceTree = "<group>"; };
+		1819494B1F4D88C900B2DD0A /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		1819494C1F4D88C900B2DD0A /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		1819494E1F4D88C900B2DD0A /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		1819494F1F4D88C900B2DD0A /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		181949501F4D88C900B2DD0A /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		181949511F4D88C900B2DD0A /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		181949631F4D8B0A00B2DD0A /* BBSSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSSwift.swift; sourceTree = "<group>"; };
 		181B8FF71F46BE7800A4C971 /* BBSURLSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSURLSessionViewController.h; sourceTree = "<group>"; };
 		181B8FF81F46BE7800A4C971 /* BBSURLSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSURLSessionViewController.m; sourceTree = "<group>"; };
 		181B8FFA1F46C5C400A4C971 /* BBSMyURLSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSMyURLSessionViewController.h; sourceTree = "<group>"; };
@@ -138,6 +178,39 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		1819493E1F4D88C900B2DD0A /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1819493F1F4D88C900B2DD0A /* LTCharacterDiffResult.swift */,
+				181949401F4D88C900B2DD0A /* LTCharacterLimbo.swift */,
+				181949411F4D88C900B2DD0A /* LTEasing.swift */,
+				181949421F4D88C900B2DD0A /* LTEmitterView.swift */,
+				181949431F4D88C900B2DD0A /* LTMorphingEffect.swift */,
+				181949441F4D88C900B2DD0A /* LTMorphingLabel+Anvil.swift */,
+				181949451F4D88C900B2DD0A /* LTMorphingLabel+Burn.swift */,
+				181949461F4D88C900B2DD0A /* LTMorphingLabel+Evaporate.swift */,
+				181949471F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift */,
+				181949481F4D88C900B2DD0A /* LTMorphingLabel+Pixelate.swift */,
+				181949491F4D88C900B2DD0A /* LTMorphingLabel+Sparkle.swift */,
+				1819494A1F4D88C900B2DD0A /* LTMorphingLabel.h */,
+				1819494B1F4D88C900B2DD0A /* LTMorphingLabel.swift */,
+				1819494C1F4D88C900B2DD0A /* LTStringDiffResult.swift */,
+				1819494D1F4D88C900B2DD0A /* Particles */,
+			);
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		1819494D1F4D88C900B2DD0A /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				1819494E1F4D88C900B2DD0A /* Fire.png */,
+				1819494F1F4D88C900B2DD0A /* Fragment.png */,
+				181949501F4D88C900B2DD0A /* Smoke.png */,
+				181949511F4D88C900B2DD0A /* Sparkle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		181B8FFD1F46D2C300A4C971 /* ZFDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +286,7 @@
 		18C2353B1F42E56100553864 /* NxhTest */ = {
 			isa = PBXGroup;
 			children = (
+				1819493E1F4D88C900B2DD0A /* LTMorphingLabel */,
 				181B90041F46D39300A4C971 /* TZImagePickerController */,
 				181B8FFD1F46D2C300A4C971 /* ZFDownload */,
 				1818992E1F43D5250035FAFA /* UIColor */,
@@ -234,6 +308,9 @@
 				181B8FFA1F46C5C400A4C971 /* BBSMyURLSessionViewController.h */,
 				181B8FFB1F46C5C400A4C971 /* BBSMyURLSessionViewController.m */,
 				182BEA9F1F46EB7B00FD6ABE /* BBSDownload */,
+				1819493B1F4D883800B2DD0A /* BBSLabelViewController.h */,
+				1819493C1F4D883800B2DD0A /* BBSLabelViewController.m */,
+				181949631F4D8B0A00B2DD0A /* BBSSwift.swift */,
 			);
 			path = NxhTest;
 			sourceTree = "<group>";
@@ -343,12 +420,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				182BEAAF1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.xib in Resources */,
+				1819495F1F4D88C900B2DD0A /* Fire.png in Resources */,
 				181B901B1F46D39300A4C971 /* TZImagePickerController.bundle in Resources */,
 				182BEAB31F46EB7B00FD6ABE /* BBSDownloadViewController.xib in Resources */,
 				18C2354C1F42E56100553864 /* LaunchScreen.storyboard in Resources */,
 				182BEAAD1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
+				181949601F4D88C900B2DD0A /* Fragment.png in Resources */,
 				182BEAB11F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib in Resources */,
+				181949611F4D88C900B2DD0A /* Smoke.png in Resources */,
+				181949621F4D88C900B2DD0A /* Sparkle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,32 +444,47 @@
 				181B90021F46D2C300A4C971 /* ZFDownloadManager.m in Sources */,
 				18C235661F430AC200553864 /* BBSWeightChangeVC.m in Sources */,
 				181B901A1F46D39300A4C971 /* TZImageManager.m in Sources */,
+				1819495D1F4D88C900B2DD0A /* LTMorphingLabel.swift in Sources */,
 				182BEAAE1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m in Sources */,
+				1819495E1F4D88C900B2DD0A /* LTStringDiffResult.swift in Sources */,
 				181899311F43D5250035FAFA /* UIColor+HexColor.m in Sources */,
 				182BEAB21F46EB7B00FD6ABE /* BBSDownloadViewController.m in Sources */,
 				18C2355D1F42FAFB00553864 /* UIImage+down.m in Sources */,
 				181B90031F46D2C300A4C971 /* ZFSessionModel.m in Sources */,
 				182BEAAC1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m in Sources */,
+				181949541F4D88C900B2DD0A /* LTEasing.swift in Sources */,
+				1819495A1F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift in Sources */,
 				18C235561F42E56F00553864 /* iCarousel.m in Sources */,
+				181949531F4D88C900B2DD0A /* LTCharacterLimbo.swift in Sources */,
 				18C2356E1F430B1A00553864 /* LYSHistogramChart.m in Sources */,
+				181949561F4D88C900B2DD0A /* LTMorphingEffect.swift in Sources */,
+				1819493D1F4D883800B2DD0A /* BBSLabelViewController.m in Sources */,
 				181B90191F46D39300A4C971 /* TZAssetModel.m in Sources */,
 				181B901C1F46D39300A4C971 /* TZImagePickerController.m in Sources */,
 				18C235601F42FD0500553864 /* UIImageView+colorGraduallyChange.m in Sources */,
 				182BEAB01F46EB7B00FD6ABE /* BBSDownloadTableViewCell.m in Sources */,
 				181B8FFC1F46C5C400A4C971 /* BBSMyURLSessionViewController.m in Sources */,
+				181949581F4D88C900B2DD0A /* LTMorphingLabel+Burn.swift in Sources */,
 				181B901E1F46D39300A4C971 /* TZPhotoPreviewCell.m in Sources */,
 				181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */,
 				18C2355A1F42FAEC00553864 /* UIImage+scale.m in Sources */,
 				181B901D1F46D39300A4C971 /* TZPhotoPickerController.m in Sources */,
+				1819495C1F4D88C900B2DD0A /* LTMorphingLabel+Sparkle.swift in Sources */,
 				18C235701F430B1A00553864 /* LYSToolObject.m in Sources */,
+				181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */,
+				181949571F4D88C900B2DD0A /* LTMorphingLabel+Anvil.swift in Sources */,
+				181949591F4D88C900B2DD0A /* LTMorphingLabel+Evaporate.swift in Sources */,
+				181949551F4D88C900B2DD0A /* LTEmitterView.swift in Sources */,
 				181B90211F46D39300A4C971 /* UIView+Layout.m in Sources */,
 				18C235411F42E56100553864 /* AppDelegate.m in Sources */,
 				18C235631F4304C800553864 /* UIImage+fuzzy.m in Sources */,
 				181B901F1F46D39300A4C971 /* TZPhotoPreviewController.m in Sources */,
+				181949521F4D88C900B2DD0A /* LTCharacterDiffResult.swift in Sources */,
 				181B90181F46D39300A4C971 /* TZAssetCell.m in Sources */,
 				18C2356F1F430B1A00553864 /* LYSLineChart.m in Sources */,
 				18C2353E1F42E56100553864 /* main.m in Sources */,
 				181B8FF91F46BE7800A4C971 /* BBSURLSessionViewController.m in Sources */,
+				1819495B1F4D88C900B2DD0A /* LTMorphingLabel+Pixelate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,11 +598,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -514,11 +612,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

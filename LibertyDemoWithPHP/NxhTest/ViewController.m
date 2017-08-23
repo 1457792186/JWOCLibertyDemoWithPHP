@@ -17,6 +17,7 @@
 #import "BBSURLSessionViewController.h"
 #import "BBSMyURLSessionViewController.h"
 #import "BBSDownloadViewController.h"
+#import "BBSLabelViewController.h"
 
 @interface ViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -37,10 +38,10 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
-    for (int i = 0; i<6; i++) {
-        [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",i]];
+    for (int i = 0; i<7; i++) {
+        [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%6)]];
     }
     
     _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT/2.f)];
@@ -159,6 +160,10 @@
             [self presentViewController:downLoadVC animated:YES completion:nil];
         }
             break;
+        case 5:
+        {
+            
+        }
         default:
         {//背景图毛玻璃,只执行一次
             if (_dataArray.count > 0) {
