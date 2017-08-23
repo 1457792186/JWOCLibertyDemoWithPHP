@@ -102,6 +102,7 @@
         
         UILabel * styleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40.f)];
         styleLabel.text = _styleTextArr[indexPath.row%_styleTextArr.count];
+        styleLabel.textAlignment = NSTextAlignmentRight;
         [labelCell addSubview:styleLabel];
     }
     
