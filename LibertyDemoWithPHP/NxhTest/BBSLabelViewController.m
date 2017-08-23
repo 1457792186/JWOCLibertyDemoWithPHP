@@ -84,10 +84,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * labelCell = [tableView dequeueReusableCellWithIdentifier:@"labelCell"];
-    if (!labelCell) {
-        labelCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"labelCell"];
-    }
+    UITableViewCell * labelCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"labelCell"];
+//    }
     labelCell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (![labelCell viewWithTag:1001]) {
         LTMorphingLabel * morphingLabel = [[LTMorphingLabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40.f)];
