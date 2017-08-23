@@ -93,6 +93,7 @@
         LTMorphingLabel * morphingLabel = [[LTMorphingLabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40.f)];
         morphingLabel.font = [UIFont systemFontOfSize:20.f];
         morphingLabel.text = _textArr[indexPath.row];
+        morphingLabel.delegate = self;
         morphingLabel.textColor = [UIColor blackColor];
         morphingLabel.morphingEffect = indexPath.row%_styleTextArr.count;
         morphingLabel.tag = 1001;
