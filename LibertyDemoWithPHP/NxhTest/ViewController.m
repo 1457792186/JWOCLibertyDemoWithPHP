@@ -162,8 +162,10 @@
             break;
         case 5:
         {
-            
+            BBSLabelViewController * labelVC = [[BBSLabelViewController alloc]init];
+            [self presentViewController:labelVC animated:YES completion:nil];
         }
+            break;
         default:
         {//背景图毛玻璃,只执行一次
             if (_dataArray.count > 0) {

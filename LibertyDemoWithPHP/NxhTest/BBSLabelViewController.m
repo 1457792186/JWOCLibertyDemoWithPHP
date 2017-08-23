@@ -10,7 +10,11 @@
 #import "NxhTest-Swift.h"
 #import "LTMorphingLabel.h"
 
-@interface BBSLabelViewController ()
+@interface BBSLabelViewController ()<LTMorphingLabelDelegate,UITableViewDelegate,UITableViewDataSource>
+
+@property (strong,nonatomic)NSArray * textArr;
+@property (strong,nonatomic)NSArray * styleTextArr;
+@property (strong,nonatomic)UITableView * labelTableView;
 
 @end
 
@@ -28,22 +32,83 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor cyanColor];
+    
+    _labelTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREENWIDTH, SCREENHEIGHT - 64.f)];
+    _labelTableView.dataSource = self;
+    _labelTableView.delegate = self;
+    [self.view addSubview:_labelTableView];
+    _textArr = @[@"What is design?",
+                 @"Design",
+                 @"Design is not just",
+                 @"what it looks like",
+                 @"and feels like.",
+                 @"Design",
+                 @"is how it works.",
+                 @"- Steve Jobs",
+                 @"Older people",
+                 @"sit down and ask,",
+                 @"'What is it?'",
+                 @"but the boy asks,",
+                 @"'What can I do with it?'.",
+                 @"- Steve Jobs",
+                 @"", @"Swift",
+                 @"Objective-C",
+                 @"iPhone",
+                 @"iPad",
+                 @"Mac Mini",
+                 @"MacBook Pro🔥",
+                 @"Mac Pro⚡️",
+                 @"爱老婆",
+                 @"老婆和女儿"];
+    _styleTextArr = @[@"Scale", @"Evaporate", @"Fall", @"Pixelate", @"Sparkle", @"Burn", @"Anvil"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.f;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.labelTableView reloadData];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _textArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * labelCell = [tableView dequeueReusableCellWithIdentifier:@"labelCell"];
+    if (!labelCell) {
+        labelCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"labelCell"];
+    }
+    labelCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (![labelCell viewWithTag:1001]) {
+        LTMorphingLabel * morphingLabel = [[LTMorphingLabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40.f)];
+        morphingLabel.font = [UIFont systemFontOfSize:20.f];
+        morphingLabel.text = _textArr[indexPath.row];
+        morphingLabel.textColor = [UIColor blackColor];
+        morphingLabel.morphingEffect = indexPath.row%_styleTextArr.count;
+        morphingLabel.tag = 1001;
+        
+        [labelCell addSubview:morphingLabel];
+        
+        UILabel * styleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40.f)];
+        styleLabel.text = _styleTextArr[indexPath.row%_styleTextArr.count];
+        [labelCell addSubview:styleLabel];
+    }
+    
+    
+    return labelCell;
+}
+
+
+
 
 @end
