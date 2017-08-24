@@ -12,7 +12,7 @@
 /**
  *  @brief  获取UIColor色彩，根据Hex;
  *
- *  @param hexColor 字符串（Hex）;
+ *  @param hexString 字符串（Hex）;
  *
  *  @return UIColor
  */

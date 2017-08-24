@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"本地数据库连接PHP测试";
+    
     _dataTextView = [[UITextView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT/3.f, SCREENWIDTH, SCREENHEIGHT*2/3.f)];
     _dataTextView.textColor = [UIColor blackColor];
     _dataTextView.backgroundColor = [UIColor greenColor];

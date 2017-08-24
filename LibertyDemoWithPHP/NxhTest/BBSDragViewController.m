@@ -23,8 +23,11 @@
     /*
      设置背景透明必要在父视图中设置：
      本视图.modalPresentationStyle = UIModalPresentationOverFullScreen;
-     并从跟视图弹出
+     并从根视图rootViewController弹出
      */
+    
+    self.title = @"视图拖拽消失";
+    
     self.view.backgroundColor = [UIColor clearColor];
     UIView * alphaView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     alphaView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7f];

@@ -23,6 +23,8 @@
     [super viewDidLoad];
     //urlSession链接
     
+    self.title = @"网络连接";
+    
     _dataTextView = [[UITextView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT/3.f, SCREENWIDTH, SCREENHEIGHT*2/3.f)];
     _dataTextView.textColor = [UIColor blackColor];
     _dataTextView.backgroundColor = [UIColor greenColor];

@@ -18,11 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"图表绘制";
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self weightChangeChart];
     [self costChangeChart];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 //体重曲线图
 - (void)weightChangeChart{
@@ -115,10 +122,7 @@
 }
 
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [super touchesBegan:touches withEvent:event];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 
 @end

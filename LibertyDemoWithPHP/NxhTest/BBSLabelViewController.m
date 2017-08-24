@@ -10,6 +10,15 @@
 #import "NxhTest-Swift.h"
 #import "LTMorphingLabel.h"
 
+/*
+ 引入swift文件：
+ 引入swift项目 在github上下载原项目压缩包，在Finder中找到LTMorphingLabel文件夹，将其添加到你的项目里。
+ 项目文件-> TARGETS -> Build Settings -> Packaging -> Define Module设置为 Yes。
+ 项目文件-> TARGETS -> Build Settings -> Packaging ->Product Module Name设置为你的项目名称。
+ ViewController中包含头文件：#import "项目名称-Swift.h"。
+ 需要首先自创建一个swift文件并继承自NSObject类，若有错项目文件-> TARGETS -> Build Settings ->Swift Language Version更改
+ OC引入swift代码的方法都是这个流程
+ */
 @interface BBSLabelViewController ()<LTMorphingLabelDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (strong,nonatomic)NSArray * textArr;
@@ -20,19 +29,13 @@
 
 @implementation BBSLabelViewController
 
-/*
- 引入swift文件：
- 引入swift项目 在github上下载原项目压缩包，在Finder中找到LTMorphingLabel文件夹，将其添加到你的项目里。 
- 项目文件-> TARGETS -> Build Settings -> Packaging -> Define Module设置为 Yes。 
- 项目文件-> TARGETS -> Build Settings -> Packaging ->Product Module Name设置为你的项目名称。 
- ViewController中包含头文件：#import "项目名称-Swift.h"。
- 需要首先自创建一个swift文件并继承自NSObject类，若有错项目文件-> TARGETS -> Build Settings ->Swift Language Version更改
- OC引入swift代码的方法都是这个流程
- */
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor cyanColor];
+    
+    self.title = @"Swift混合编程&炫酷文本效果";
     
     _labelTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREENWIDTH, SCREENHEIGHT - 64.f)];
     _labelTableView.dataSource = self;

@@ -19,6 +19,8 @@
 #import "BBSDownloadViewController.h"
 #import "BBSLabelViewController.h"
 #import "BBSDragViewController.h"
+#import "BBSAnimatedTransitionViewController.h"
+#import "BBSStockViewController.h"
 
 @interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -33,15 +35,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"翻页效果";
+    
     self.view.backgroundColor = [UIColor cyanColor];
     
     _bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"股票绘制",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
-    for (int i = 0; i<8; i++) {
+    for (int i = 0; i<_nameArray.count; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
     }
     
@@ -73,9 +78,9 @@
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
     UILabel * label = nil;
-    if (view) {
-        label = [view viewWithTag:1001];
-    }else{
+//    if (view) {
+//        label = [view viewWithTag:1001];
+//    }else{
         CGFloat width  = SCREENWIDTH*2/3.f;
         view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, width, width)];
         UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, view.frame.size.width, view.frame.size.height/2.f)];
@@ -102,7 +107,7 @@
         label.textColor = [UIColor whiteColor];
         label.tag = 1001;
         [view addSubview:label];
-    }
+//    }
     label.text = _nameArray[index];
     
     return view;
@@ -175,6 +180,18 @@
             
             UIViewController * rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
             [rootViewController presentViewController:dragVC animated:YES completion:nil];
+        }
+            break;
+        case 7:
+        {//自定义转场效果
+            BBSAnimatedTransitionViewController * animatedVC = [[BBSAnimatedTransitionViewController alloc]init];
+            [self presentViewController:animatedVC animated:YES completion:nil];
+        }
+            break;
+        case 8:
+        {//股票图绘制
+            BBSStockViewController * stockVC = [[BBSStockViewController alloc]init];
+            [self presentViewController:stockVC animated:YES completion:nil];
         }
             break;
         default:

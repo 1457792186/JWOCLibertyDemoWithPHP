@@ -30,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"断点下载";
+    
     _downLoadArr = [NSMutableArray array];
     _dataArr = [NSMutableArray array];
     
