@@ -49,9 +49,10 @@
 		182BEAB11F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAA81F46EB7B00FD6ABE /* BBSDownloadTableViewCell.xib */; };
 		182BEAB21F46EB7B00FD6ABE /* BBSDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAAA1F46EB7B00FD6ABE /* BBSDownloadViewController.m */; };
 		182BEAB31F46EB7B00FD6ABE /* BBSDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAAB1F46EB7B00FD6ABE /* BBSDownloadViewController.xib */; };
+		18301B6E1F4E735400294664 /* BBSDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18301B6D1F4E735400294664 /* BBSDragViewController.m */; };
 		18C2353E1F42E56100553864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2353D1F42E56100553864 /* main.m */; };
 		18C235411F42E56100553864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235401F42E56100553864 /* AppDelegate.m */; };
-		18C235441F42E56100553864 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235431F42E56100553864 /* ViewController.m */; };
+		18C235441F42E56100553864 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235431F42E56100553864 /* HomeViewController.m */; };
 		18C235491F42E56100553864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C235481F42E56100553864 /* Assets.xcassets */; };
 		18C2354C1F42E56100553864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C2354A1F42E56100553864 /* LaunchScreen.storyboard */; };
 		18C235561F42E56F00553864 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235551F42E56F00553864 /* iCarousel.m */; };
@@ -129,12 +130,14 @@
 		182BEAA91F46EB7B00FD6ABE /* BBSDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadViewController.h; sourceTree = "<group>"; };
 		182BEAAA1F46EB7B00FD6ABE /* BBSDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadViewController.m; sourceTree = "<group>"; };
 		182BEAAB1F46EB7B00FD6ABE /* BBSDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadViewController.xib; sourceTree = "<group>"; };
+		18301B6C1F4E735400294664 /* BBSDragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDragViewController.h; sourceTree = "<group>"; };
+		18301B6D1F4E735400294664 /* BBSDragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDragViewController.m; sourceTree = "<group>"; };
 		18C235391F42E56100553864 /* NxhTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2353D1F42E56100553864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18C2353F1F42E56100553864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18C235401F42E56100553864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18C235421F42E56100553864 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18C235431F42E56100553864 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18C235421F42E56100553864 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		18C235431F42E56100553864 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		18C235481F42E56100553864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C2354B1F42E56100553864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C2354D1F42E56100553864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,11 +298,11 @@
 				18C235531F42E56F00553864 /* iCarousel */,
 				18C2353F1F42E56100553864 /* AppDelegate.h */,
 				18C235401F42E56100553864 /* AppDelegate.m */,
-				18C235421F42E56100553864 /* ViewController.h */,
-				18C235431F42E56100553864 /* ViewController.m */,
+				18C235421F42E56100553864 /* HomeViewController.h */,
+				18C235431F42E56100553864 /* HomeViewController.m */,
 				18C235481F42E56100553864 /* Assets.xcassets */,
-				18C2354A1F42E56100553864 /* LaunchScreen.storyboard */,
 				18C2354D1F42E56100553864 /* Info.plist */,
+				18C2354A1F42E56100553864 /* LaunchScreen.storyboard */,
 				18C2353C1F42E56100553864 /* Supporting Files */,
 				18C235641F430AC200553864 /* BBSWeightChangeVC.h */,
 				18C235651F430AC200553864 /* BBSWeightChangeVC.m */,
@@ -311,6 +314,8 @@
 				1819493B1F4D883800B2DD0A /* BBSLabelViewController.h */,
 				1819493C1F4D883800B2DD0A /* BBSLabelViewController.m */,
 				181949631F4D8B0A00B2DD0A /* BBSSwift.swift */,
+				18301B6C1F4E735400294664 /* BBSDragViewController.h */,
+				18301B6D1F4E735400294664 /* BBSDragViewController.m */,
 			);
 			path = NxhTest;
 			sourceTree = "<group>";
@@ -440,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C235441F42E56100553864 /* ViewController.m in Sources */,
+				18C235441F42E56100553864 /* HomeViewController.m in Sources */,
 				181B90021F46D2C300A4C971 /* ZFDownloadManager.m in Sources */,
 				18C235661F430AC200553864 /* BBSWeightChangeVC.m in Sources */,
 				181B901A1F46D39300A4C971 /* TZImageManager.m in Sources */,
@@ -452,6 +457,7 @@
 				18C2355D1F42FAFB00553864 /* UIImage+down.m in Sources */,
 				181B90031F46D2C300A4C971 /* ZFSessionModel.m in Sources */,
 				182BEAAC1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m in Sources */,
+				18301B6E1F4E735400294664 /* BBSDragViewController.m in Sources */,
 				181949541F4D88C900B2DD0A /* LTEasing.swift in Sources */,
 				1819495A1F4D88C900B2DD0A /* LTMorphingLabel+Fall.swift in Sources */,
 				18C235561F42E56F00553864 /* iCarousel.m in Sources */,

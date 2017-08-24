@@ -6,7 +6,7 @@
 //  Copyright © 2017年 UgoMedia. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import "iCarousel.h"
 #import "UIImage+down.h"
 #import "UIImage+scale.h"
@@ -18,8 +18,9 @@
 #import "BBSMyURLSessionViewController.h"
 #import "BBSDownloadViewController.h"
 #import "BBSLabelViewController.h"
+#import "BBSDragViewController.h"
 
-@interface ViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
+@interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
 @property (strong, nonatomic)iCarousel *carousel;
 @property (strong, nonatomic)NSMutableArray * dataArray;
@@ -28,7 +29,7 @@
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,10 +39,10 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
-    for (int i = 0; i<7; i++) {
-        [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%6)]];
+    for (int i = 0; i<8; i++) {
+        [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
     }
     
     _carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT/2.f)];
@@ -89,7 +90,7 @@
         UIImage * image = [UIImage imageNamed:_dataArray[index]];
         image = [UIImage imageTransformWithImage:image];
         UIImageView * imageDown = [[UIImageView alloc]initWithFrame:CGRectMake(imageView.frame.origin.x, CGRectGetMaxY(imageView.frame), imageView.frame.size.width, view.frame.size.height - CGRectGetMaxY(imageView.frame))];
-        imageDown.contentMode =UIViewContentModeScaleAspectFit;
+        imageDown.contentMode = UIViewContentModeScaleAspectFit;
         imageDown.image = image;
         [imageDown changeAlphaWithDirection:kDirectionDown];
         imageView.transform = CGAffineTransformMakeScale(-1.0, 1.0);
@@ -161,9 +162,19 @@
         }
             break;
         case 5:
-        {
+        {//炫酷文本特效
             BBSLabelViewController * labelVC = [[BBSLabelViewController alloc]init];
             [self presentViewController:labelVC animated:YES completion:nil];
+        }
+            break;
+        case 6:
+        {//视图拖拽
+            BBSDragViewController * dragVC = [[BBSDragViewController alloc]init];
+            //设置背景透明必要
+            dragVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
+            
+            UIViewController * rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [rootViewController presentViewController:dragVC animated:YES completion:nil];
         }
             break;
         default:
