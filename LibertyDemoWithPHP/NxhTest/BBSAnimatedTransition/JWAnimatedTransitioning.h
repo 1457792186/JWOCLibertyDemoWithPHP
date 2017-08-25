@@ -22,8 +22,9 @@ typedef NS_ENUM(NSUInteger, JWInteractiveTransitionGestureDirection) {
 typedef NS_ENUM(NSUInteger, JWPresentOneTransitionType) {
     JWPresentOneTransitionTypePresent = 0,//管理present动画
     JWPresentOneTransitionTypeDismiss,//管理dismiss动画
-    JWInteractiveTransitionTypePush,
-    JWInteractiveTransitionTypePop
+    JWInteractiveTransitionTypePush,//管理push动画
+    JWInteractiveTransitionTypePop,//管理pop动画
+    JWAnimatedRotationPresent,//转角弹出
 };
 
 @interface JWAnimatedTransitioning : NSObject<UIViewControllerAnimatedTransitioning>

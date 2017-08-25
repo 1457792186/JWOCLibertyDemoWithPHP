@@ -106,6 +106,8 @@
         case JWInteractiveTransitionTypePop:
             [_vc.navigationController popViewControllerAnimated:YES];
             break;
+        default:
+            break;
     }
 }
 

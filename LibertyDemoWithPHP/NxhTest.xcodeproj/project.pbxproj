@@ -41,6 +41,7 @@
 		181B901F1F46D39300A4C971 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90131F46D39300A4C971 /* TZPhotoPreviewController.m */; };
 		181B90201F46D39300A4C971 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90151F46D39300A4C971 /* TZVideoPlayerController.m */; };
 		181B90211F46D39300A4C971 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B90171F46D39300A4C971 /* UIView+Layout.m */; };
+		1825F6D21F4FB0FF001F5463 /* BBSDragRotationPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6D11F4FB0FF001F5463 /* BBSDragRotationPresentViewController.m */; };
 		182BEAAC1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAA11F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m */; };
 		182BEAAD1F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BEAA21F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib */; };
 		182BEAAE1F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BEAA41F46EB7B00FD6ABE /* BBSDownloadingTableViewCell.m */; };
@@ -256,6 +257,8 @@
 		181B90161F46D39300A4C971 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		181B90171F46D39300A4C971 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
+		1825F6D01F4FB0FF001F5463 /* BBSDragRotationPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDragRotationPresentViewController.h; sourceTree = "<group>"; };
+		1825F6D11F4FB0FF001F5463 /* BBSDragRotationPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDragRotationPresentViewController.m; sourceTree = "<group>"; };
 		182BEAA01F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSDownloadedTableViewCell.h; sourceTree = "<group>"; };
 		182BEAA11F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSDownloadedTableViewCell.m; sourceTree = "<group>"; };
 		182BEAA21F46EB7B00FD6ABE /* BBSDownloadedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSDownloadedTableViewCell.xib; sourceTree = "<group>"; };
@@ -598,6 +601,8 @@
 				18301B6C1F4E735400294664 /* BBSDragViewController.h */,
 				18301B6D1F4E735400294664 /* BBSDragViewController.m */,
 				18CC59FC1F4EAE39004E14EB /* BBSAnimatedTransition */,
+				1825F6D01F4FB0FF001F5463 /* BBSDragRotationPresentViewController.h */,
+				1825F6D11F4FB0FF001F5463 /* BBSDragRotationPresentViewController.m */,
 				18CC5A2B1F4EBCEA004E14EB /* BBSStockViewController.h */,
 				18CC5A2C1F4EBCEA004E14EB /* BBSStockViewController.m */,
 			);
@@ -1162,6 +1167,7 @@
 				18CC5D221F4EC528004E14EB /* CandleChartDataSet.swift in Sources */,
 				18CC5D5E1F4EC528004E14EB /* ZoomViewJob.swift in Sources */,
 				18CC5D701F4EC528004E14EB /* CircleShapeRenderer.swift in Sources */,
+				1825F6D21F4FB0FF001F5463 /* BBSDragRotationPresentViewController.m in Sources */,
 				181949551F4D88C900B2DD0A /* LTEmitterView.swift in Sources */,
 				181B90211F46D39300A4C971 /* UIView+Layout.m in Sources */,
 				18CC5D431F4EC528004E14EB /* IAxisValueFormatter.swift in Sources */,
