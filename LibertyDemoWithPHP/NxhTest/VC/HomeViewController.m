@@ -8,9 +8,8 @@
 
 #import "HomeViewController.h"
 #import "iCarousel.h"
-#import "UIImage+down.h"
-#import "UIImage+scale.h"
-#import "UIImageView+colorGraduallyChange.h"
+#import "UIImage+JWImage.h"
+#import "UIImageView+JWImageView.h"
 
 #import "TZImagePickerController.h"
 #import "BBSWeightChangeVC.h"

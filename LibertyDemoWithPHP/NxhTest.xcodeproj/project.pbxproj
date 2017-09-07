@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949631F4D8B0A00B2DD0A /* BBSSwift.swift */; };
-		1825F7AE1F4FB7F5001F5463 /* UIImage+down.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6D61F4FB7F5001F5463 /* UIImage+down.m */; };
-		1825F7AF1F4FB7F5001F5463 /* UIImage+fuzzy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6D81F4FB7F5001F5463 /* UIImage+fuzzy.m */; };
-		1825F7B01F4FB7F5001F5463 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6DA1F4FB7F5001F5463 /* UIImage+scale.m */; };
-		1825F7B11F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6DC1F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.m */; };
 		1825F7B21F4FB7F5001F5463 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E01F4FB7F5001F5463 /* Animator.swift */; };
 		1825F7B31F4FB7F5001F5463 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E11F4FB7F5001F5463 /* ChartAnimationEasing.swift */; };
 		1825F7B41F4FB7F5001F5463 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E31F4FB7F5001F5463 /* BarChartView.swift */; };
@@ -200,6 +196,8 @@
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
 		186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23241F60E20300C9E244 /* BBSFaceViewController.m */; };
+		186F232A1F611E3100C9E244 /* UIImage+JWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23271F611E3100C9E244 /* UIImage+JWImage.m */; };
+		186F232B1F611E3100C9E244 /* UIImageView+JWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23291F611E3100C9E244 /* UIImageView+JWImageView.m */; };
 		18C2353E1F42E56100553864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2353D1F42E56100553864 /* main.m */; };
 		18C235411F42E56100553864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235401F42E56100553864 /* AppDelegate.m */; };
 		18C235491F42E56100553864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C235481F42E56100553864 /* Assets.xcassets */; };
@@ -209,14 +207,6 @@
 /* Begin PBXFileReference section */
 		181949631F4D8B0A00B2DD0A /* BBSSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSSwift.swift; sourceTree = "<group>"; };
 		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
-		1825F6D51F4FB7F5001F5463 /* UIImage+down.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+down.h"; sourceTree = "<group>"; };
-		1825F6D61F4FB7F5001F5463 /* UIImage+down.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+down.m"; sourceTree = "<group>"; };
-		1825F6D71F4FB7F5001F5463 /* UIImage+fuzzy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fuzzy.h"; sourceTree = "<group>"; };
-		1825F6D81F4FB7F5001F5463 /* UIImage+fuzzy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fuzzy.m"; sourceTree = "<group>"; };
-		1825F6D91F4FB7F5001F5463 /* UIImage+scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+scale.h"; sourceTree = "<group>"; };
-		1825F6DA1F4FB7F5001F5463 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+scale.m"; sourceTree = "<group>"; };
-		1825F6DB1F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+colorGraduallyChange.h"; sourceTree = "<group>"; };
-		1825F6DC1F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+colorGraduallyChange.m"; sourceTree = "<group>"; };
 		1825F6E01F4FB7F5001F5463 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		1825F6E11F4FB7F5001F5463 /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnimationEasing.swift; sourceTree = "<group>"; };
 		1825F6E31F4FB7F5001F5463 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
@@ -438,6 +428,10 @@
 		1825F87E1F4FB84D001F5463 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		186F23231F60E20300C9E244 /* BBSFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSFaceViewController.h; sourceTree = "<group>"; };
 		186F23241F60E20300C9E244 /* BBSFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSFaceViewController.m; sourceTree = "<group>"; };
+		186F23261F611E3100C9E244 /* UIImage+JWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWImage.h"; sourceTree = "<group>"; };
+		186F23271F611E3100C9E244 /* UIImage+JWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JWImage.m"; sourceTree = "<group>"; };
+		186F23281F611E3100C9E244 /* UIImageView+JWImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JWImageView.h"; sourceTree = "<group>"; };
+		186F23291F611E3100C9E244 /* UIImageView+JWImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JWImageView.m"; sourceTree = "<group>"; };
 		18C235391F42E56100553864 /* NxhTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2353D1F42E56100553864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18C2353F1F42E56100553864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -476,14 +470,10 @@
 		1825F6D41F4FB7F5001F5463 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				1825F6D51F4FB7F5001F5463 /* UIImage+down.h */,
-				1825F6D61F4FB7F5001F5463 /* UIImage+down.m */,
-				1825F6D71F4FB7F5001F5463 /* UIImage+fuzzy.h */,
-				1825F6D81F4FB7F5001F5463 /* UIImage+fuzzy.m */,
-				1825F6D91F4FB7F5001F5463 /* UIImage+scale.h */,
-				1825F6DA1F4FB7F5001F5463 /* UIImage+scale.m */,
-				1825F6DB1F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.h */,
-				1825F6DC1F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.m */,
+				186F23261F611E3100C9E244 /* UIImage+JWImage.h */,
+				186F23271F611E3100C9E244 /* UIImage+JWImage.m */,
+				186F23281F611E3100C9E244 /* UIImageView+JWImageView.h */,
+				186F23291F611E3100C9E244 /* UIImageView+JWImageView.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1045,7 +1035,6 @@
 				1825F8451F4FB7F6001F5463 /* LTStringDiffResult.swift in Sources */,
 				1825F7EE1F4FB7F5001F5463 /* ILineRadarChartDataSet.swift in Sources */,
 				1825F81D1F4FB7F5001F5463 /* LineRadarRenderer.swift in Sources */,
-				1825F7AE1F4FB7F5001F5463 /* UIImage+down.m in Sources */,
 				1825F80D1F4FB7F5001F5463 /* AnimatedMoveViewJob.swift in Sources */,
 				1825F7FD1F4FB7F5001F5463 /* CombinedHighlighter.swift in Sources */,
 				1825F8531F4FB7F6001F5463 /* TZPhotoPreviewCell.m in Sources */,
@@ -1062,6 +1051,7 @@
 				1825F7CF1F4FB7F5001F5463 /* BarLineScatterCandleBubbleChartData.swift in Sources */,
 				1825F8581F4FB7F6001F5463 /* ZFDownloadManager.m in Sources */,
 				1825F7B91F4FB7F5001F5463 /* CombinedChartView.swift in Sources */,
+				186F232A1F611E3100C9E244 /* UIImage+JWImage.m in Sources */,
 				1825F8111F4FB7F5001F5463 /* ViewPortJob.swift in Sources */,
 				1825F7D91F4FB7F5001F5463 /* ChartDataEntryBase.swift in Sources */,
 				1825F8511F4FB7F6001F5463 /* TZImagePickerController.m in Sources */,
@@ -1144,6 +1134,7 @@
 				1825F7F51F4FB7F5001F5463 /* DefaultFillFormatter.swift in Sources */,
 				1825F7FB1F4FB7F5001F5463 /* BarHighlighter.swift in Sources */,
 				1825F88F1F4FB84D001F5463 /* BBSURLSessionViewController.m in Sources */,
+				186F232B1F611E3100C9E244 /* UIImageView+JWImageView.m in Sources */,
 				1825F84D1F4FB7F6001F5463 /* TZAssetCell.m in Sources */,
 				1825F7DE1F4FB7F5001F5463 /* LineRadarChartDataSet.swift in Sources */,
 				1825F7F91F4FB7F5001F5463 /* IndexAxisValueFormatter.swift in Sources */,
@@ -1196,16 +1187,13 @@
 				1825F8521F4FB7F6001F5463 /* TZPhotoPickerController.m in Sources */,
 				1825F8271F4FB7F5001F5463 /* SquareShapeRenderer.swift in Sources */,
 				1825F7FE1F4FB7F5001F5463 /* Highlight.swift in Sources */,
-				1825F7B11F4FB7F5001F5463 /* UIImageView+colorGraduallyChange.m in Sources */,
 				1825F8811F4FB84D001F5463 /* JWPercentDrivenInteractiveTransition.m in Sources */,
 				1825F8221F4FB7F5001F5463 /* ChevronDownShapeRenderer.swift in Sources */,
 				1825F84B1F4FB7F6001F5463 /* LYSLineChart.m in Sources */,
-				1825F7B01F4FB7F5001F5463 /* UIImage+scale.m in Sources */,
 				1825F8051F4FB7F5001F5463 /* BarChartDataProvider.swift in Sources */,
 				1825F8321F4FB7F5001F5463 /* ChartUtils.swift in Sources */,
 				1825F8281F4FB7F5001F5463 /* TriangleShapeRenderer.swift in Sources */,
 				1825F81C1F4FB7F5001F5463 /* LineChartRenderer.swift in Sources */,
-				1825F7AF1F4FB7F5001F5463 /* UIImage+fuzzy.m in Sources */,
 				1825F82A1F4FB7F5001F5463 /* ScatterChartRenderer.swift in Sources */,
 				1825F8191F4FB7F5001F5463 /* CombinedChartRenderer.swift in Sources */,
 				1825F7DF1F4FB7F5001F5463 /* LineScatterCandleRadarChartDataSet.swift in Sources */,

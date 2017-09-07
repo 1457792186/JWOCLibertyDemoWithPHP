@@ -1,14 +1,14 @@
 //
-//  UIImageView+colorGraduallyChange.h
+//  UIImageView+JWImageView.h
 //  NxhTest
 //
-//  Created by apple on 2017/8/15.
+//  Created by apple on 2017/8/24.
 //  Copyright © 2017年 UgoMedia. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-#import "UIImage+fuzzy.h"
+#import "UIImage+JWImage.h"
 
 typedef NS_ENUM(NSUInteger, KImageColorChangeDirectionStyle) {
     
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, KImageColorChangeDirectionStyle) {
     kDirectionRight,//右-左，0-1
 };
 
-@interface UIImageView (colorGraduallyChange)
+@interface UIImageView (JWImageView)
 
 //颜色渐变
 - (void)changeAlphaWithDirection:(KImageColorChangeDirectionStyle)direction;
@@ -27,5 +27,10 @@ typedef NS_ENUM(NSUInteger, KImageColorChangeDirectionStyle) {
 - (void)fuzzyImage;
 //模糊背景——图片毛玻璃
 - (void)fuzzyWithImageWithBlurNumber:(CGFloat)blur;
+
+//水平翻转
+- (void)imageFlipHorizontal;
+//垂直翻转
+- (void)imageFlipVertical;
 
 @end

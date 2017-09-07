@@ -1,17 +1,16 @@
 //
-//  UIImageView+colorGraduallyChange.m
+//  UIImageView+JWImageView.m
 //  NxhTest
 //
-//  Created by apple on 2017/8/15.
+//  Created by apple on 2017/8/24.
 //  Copyright © 2017年 UgoMedia. All rights reserved.
 //
 
-#import "UIImageView+colorGraduallyChange.h"
+#import "UIImageView+JWImageView.h"
 
+@implementation UIImageView (JWImageView)
 
-@implementation UIImageView (colorGraduallyChange)
-
-
+//颜色渐变
 - (void)changeAlphaWithDirection:(KImageColorChangeDirectionStyle)direction{
     CAGradientLayer *_gradLayer = [CAGradientLayer layer];
     NSArray *colors = [NSArray arrayWithObjects:
@@ -61,7 +60,7 @@
     [self.layer setMask:_gradLayer];
 }
 
-
+//模糊背景——毛玻璃
 - (void)fuzzyImage{
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
@@ -69,8 +68,19 @@
     [self addSubview:effectView];
 }
 
+//模糊背景——图片毛玻璃
 - (void)fuzzyWithImageWithBlurNumber:(CGFloat)blur{
     self.image = [UIImage coreBlurImage:self.image withBlurNumber:blur];
+}
+
+//水平翻转
+- (void)imageFlipHorizontal;{
+    self.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+}
+
+//垂直翻转
+- (void)imageFlipVertical{
+    self.transform = CGAffineTransformMakeScale(1.0,-1.0);
 }
 
 @end

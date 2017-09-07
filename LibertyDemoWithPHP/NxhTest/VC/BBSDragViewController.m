@@ -8,8 +8,8 @@
 //
 
 #import "BBSDragViewController.h"
-#import "UIImage+down.h"
-#import "UIImageView+colorGraduallyChange.h"
+#import "UIImage+JWImage.h"
+#import "UIImageView+JWImageView.h"
 @interface BBSDragViewController ()
 
 @end
