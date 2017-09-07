@@ -199,6 +199,7 @@
 		1825F88F1F4FB84D001F5463 /* BBSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87A1F4FB84D001F5463 /* BBSURLSessionViewController.m */; };
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
+		186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23241F60E20300C9E244 /* BBSFaceViewController.m */; };
 		18C2353E1F42E56100553864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2353D1F42E56100553864 /* main.m */; };
 		18C235411F42E56100553864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C235401F42E56100553864 /* AppDelegate.m */; };
 		18C235491F42E56100553864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C235481F42E56100553864 /* Assets.xcassets */; };
@@ -435,6 +436,8 @@
 		1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSWeightChangeVC.m; sourceTree = "<group>"; };
 		1825F87D1F4FB84D001F5463 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1825F87E1F4FB84D001F5463 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		186F23231F60E20300C9E244 /* BBSFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSFaceViewController.h; sourceTree = "<group>"; };
+		186F23241F60E20300C9E244 /* BBSFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSFaceViewController.m; sourceTree = "<group>"; };
 		18C235391F42E56100553864 /* NxhTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2353D1F42E56100553864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18C2353F1F42E56100553864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -876,6 +879,8 @@
 				1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */,
 				1825F87D1F4FB84D001F5463 /* HomeViewController.h */,
 				1825F87E1F4FB84D001F5463 /* HomeViewController.m */,
+				186F23231F60E20300C9E244 /* BBSFaceViewController.h */,
+				186F23241F60E20300C9E244 /* BBSFaceViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -984,6 +989,7 @@
 				TargetAttributes = {
 					18C235381F42E56100553864 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5D5Z473WJW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1171,6 +1177,7 @@
 				1825F7E91F4FB7F5001F5463 /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				1825F7C91F4FB7F5001F5463 /* XAxis.swift in Sources */,
 				181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */,
+				186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */,
 				1825F7F71F4FB7F5001F5463 /* IAxisValueFormatter.swift in Sources */,
 				1825F8241F4FB7F5001F5463 /* CircleShapeRenderer.swift in Sources */,
 				1825F7D71F4FB7F5001F5463 /* ChartData.swift in Sources */,
@@ -1331,13 +1338,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5D5Z473WJW;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1346,13 +1356,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5D5Z473WJW;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhTestfsafasf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -63,7 +63,7 @@
     CGFloat tx = [recognizer translationInView:self.view].x;
     
     //在 y 轴上面滑动的距离
-    CGFloat ty = [recognizer translationInView:self.view].y;
+//    CGFloat ty = [recognizer translationInView:self.view].y;
     
     CGFloat angle = tx/SCREENWIDTH;
     

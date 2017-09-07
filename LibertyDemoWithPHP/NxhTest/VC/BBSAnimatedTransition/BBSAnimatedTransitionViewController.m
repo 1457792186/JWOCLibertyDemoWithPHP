@@ -37,7 +37,7 @@
     [_interactiveDismiss addPanGestureForViewController:self];
 }
 
-#pragma mark - UIViewControllerTransitioningDelegate;
+#pragma mark - UIViewControllerTransitioningDelegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     //这里我们初始化presentType
     return [JWAnimatedTransitioning transitionWithTransitionType:JWPresentOneTransitionTypePresent GestureDirection:JWInteractiveTransitionGestureDirectionDown];
