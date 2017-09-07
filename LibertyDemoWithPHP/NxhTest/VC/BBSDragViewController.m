@@ -4,7 +4,7 @@
 //  NxhTest
 //
 //  Created by apple on 2017/8/24.
-//  Copyright © 2017年 UgoMedia. All rights reserved.
+//  Copyright © 2017年 JiangWei. All rights reserved.
 //
 
 #import "BBSDragViewController.h"
