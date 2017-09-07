@@ -53,7 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"人脸识别";
+    self.title = @"人脸识别&自定义相机";
     
     [self setupCamera];
 }
