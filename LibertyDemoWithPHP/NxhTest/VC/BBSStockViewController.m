@@ -21,6 +21,8 @@
  打包注意：
  Builld Settings的Build Options的ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES需要设置为YES
  或者Xcode7设置EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+ 
+  可能需要添加Defines Module -> YES
  */
 @interface BBSStockViewController ()<ChartViewDelegate>
 
