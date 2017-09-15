@@ -18,6 +18,9 @@
  ViewController中包含头文件：#import "项目名称-Swift.h"。
  需要首先自创建一个swift文件并继承自NSObject类，若有错项目文件-> TARGETS -> Build Settings ->Swift Language Version更改
  OC引入swift代码的方法都是这个流程
+ 
+ 打包注意：
+ Builld Settings的Build Options的ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES需要设置为YES
  */
 @interface BBSLabelViewController ()<LTMorphingLabelDelegate,UITableViewDelegate,UITableViewDataSource>
 
