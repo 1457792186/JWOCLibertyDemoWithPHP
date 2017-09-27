@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "BBSARViewController.h"
 #import "iCarousel.h"
 #import "UIImage+JWImage.h"
 #import "UIImageView+JWImageView.h"
@@ -45,7 +46,7 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
@@ -208,6 +209,16 @@
         {
             BBSFaceViewController * faceVC = [[BBSFaceViewController alloc]init];
             [self presentViewController:faceVC animated:YES completion:nil];
+        }
+            break;
+        case 11:
+        {
+            BBSARViewController * arVC = [[BBSARViewController alloc]init];
+            if (IOS11_OR_LATER) {
+                [self presentViewController:arVC animated:YES completion:nil];
+            }else{
+                NSLog(@"iOS11前不可用");
+            }
         }
             break;
         default:

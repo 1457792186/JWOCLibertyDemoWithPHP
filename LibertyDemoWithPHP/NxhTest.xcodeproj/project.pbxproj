@@ -195,6 +195,8 @@
 		1825F88F1F4FB84D001F5463 /* BBSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87A1F4FB84D001F5463 /* BBSURLSessionViewController.m */; };
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
+		183FB97D1F7B9ED200D61E74 /* BBSARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */; };
+		183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
 		186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23241F60E20300C9E244 /* BBSFaceViewController.m */; };
 		186F232A1F611E3100C9E244 /* UIImage+JWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23271F611E3100C9E244 /* UIImage+JWImage.m */; };
 		186F232B1F611E3100C9E244 /* UIImageView+JWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23291F611E3100C9E244 /* UIImageView+JWImageView.m */; };
@@ -426,6 +428,13 @@
 		1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSWeightChangeVC.m; sourceTree = "<group>"; };
 		1825F87D1F4FB84D001F5463 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1825F87E1F4FB84D001F5463 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSARViewController.h; sourceTree = "<group>"; };
+		183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSARViewController.m; sourceTree = "<group>"; };
+		183FB97F1F7B9F0600D61E74 /* BiggerTouchBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerTouchBtn.h; sourceTree = "<group>"; };
+		183FB9801F7B9F0600D61E74 /* BiggerTouchBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerTouchBtn.m; sourceTree = "<group>"; };
+		183FB9831F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BarItemEndgeFixEleven.h"; sourceTree = "<group>"; };
+		183FB9841F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BarItemEndgeFixEleven.m"; sourceTree = "<group>"; };
+		183FB9861F7BA0D900D61E74 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		186F23231F60E20300C9E244 /* BBSFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSFaceViewController.h; sourceTree = "<group>"; };
 		186F23241F60E20300C9E244 /* BBSFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSFaceViewController.m; sourceTree = "<group>"; };
 		186F23261F611E3100C9E244 /* UIImage+JWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWImage.h"; sourceTree = "<group>"; };
@@ -446,6 +455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +465,7 @@
 		1825F6D31F4FB7F5001F5463 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				183FB97E1F7B9F0600D61E74 /* NavButton */,
 				1825F6D41F4FB7F5001F5463 /* Category */,
 				1825F6DD1F4FB7F5001F5463 /* Charts */,
 				1825F7741F4FB7F5001F5463 /* iCarousel */,
@@ -871,6 +882,8 @@
 				1825F87E1F4FB84D001F5463 /* HomeViewController.m */,
 				186F23231F60E20300C9E244 /* BBSFaceViewController.h */,
 				186F23241F60E20300C9E244 /* BBSFaceViewController.m */,
+				183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */,
+				183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -907,11 +920,31 @@
 			path = BBSDownload;
 			sourceTree = "<group>";
 		};
+		183FB97E1F7B9F0600D61E74 /* NavButton */ = {
+			isa = PBXGroup;
+			children = (
+				183FB97F1F7B9F0600D61E74 /* BiggerTouchBtn.h */,
+				183FB9801F7B9F0600D61E74 /* BiggerTouchBtn.m */,
+				183FB9831F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.h */,
+				183FB9841F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.m */,
+			);
+			path = NavButton;
+			sourceTree = "<group>";
+		};
+		183FB9851F7BA0D800D61E74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183FB9861F7BA0D900D61E74 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18C235301F42E56100553864 = {
 			isa = PBXGroup;
 			children = (
 				18C2353B1F42E56100553864 /* NxhTest */,
 				18C2353A1F42E56100553864 /* Products */,
+				183FB9851F7BA0D800D61E74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1200,6 +1233,7 @@
 				1825F8571F4FB7F6001F5463 /* UIColor+HexColor.m in Sources */,
 				1825F8431F4FB7F6001F5463 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1825F7FA1F4FB7F5001F5463 /* IValueFormatter.swift in Sources */,
+				183FB97D1F7B9ED200D61E74 /* BBSARViewController.m in Sources */,
 				1825F7B21F4FB7F5001F5463 /* Animator.swift in Sources */,
 				1825F81B1F4FB7F5001F5463 /* LegendRenderer.swift in Sources */,
 				1825F8351F4FB7F5001F5463 /* Transformer.swift in Sources */,

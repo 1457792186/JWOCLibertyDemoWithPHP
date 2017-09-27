@@ -15,4 +15,15 @@
 
 #define WEAK_SELF   __weak typeof(self) weakSelf = self;
 
+#define IPad ([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad ? YES : NO)
+#define IPod ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+#define IPhone (IPad==NO && IPod==NO ? YES : NO)
+#define Iphone4S (IPhone && mainScreenHeight <= 480.0 ? YES : NO)
+#define Iphone5S (IPhone && mainScreenHeight>480.0 && mainScreenHeight<=568.0 ? YES : NO)
+#define Iphone6 (IPhone && mainScreenHeight>568.0 && mainScreenHeight<=667.0 ? YES : NO)
+#define Iphone6p (IPhone && mainScreenHeight >= 736.0&& mainScreenHeight<=800.0 ? YES : NO)
+#define IphoneX  (IPad==NO && mainScreenHeight >= 812.0 ? YES : NO)
+
+#define IOS11_OR_LATER    ( [[UIDevice currentDevice].systemVersion floatValue] >= 11.0 )
+
 #endif /* JWTestPCH_pch */
