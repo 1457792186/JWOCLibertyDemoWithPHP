@@ -11,7 +11,9 @@
 @interface BBSChooseCityView()<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property(nonatomic,strong)NSMutableDictionary * cityDic;
+@property(nonatomic,strong)NSMutableArray * provinceArr;
 @property(nonatomic,strong)NSMutableArray * cityArr;
+@property(nonatomic,strong)NSMutableArray * areaArr;
 @property(nonatomic,strong)NSMutableDictionary * selectedCityDic;
 
 @end
@@ -22,7 +24,7 @@
     if (self) {
         [self cityDicSet];
         
-        self.selectedCityDic=nil;
+        self.selectedCityDic= [NSMutableDictionary dictionary];
         
         self.backgroundColor=[UIColor whiteColor];
         self.layer.borderWidth=1;
@@ -60,7 +62,7 @@
     NSString * filePath = [[NSBundle mainBundle] pathForResource:@"Setting" ofType:@"plist"];
     NSDictionary * dataDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     _cityDic = [NSMutableDictionary dictionaryWithDictionary:dataDic[@"CityArr"]];
-    _cityArr = [NSMutableArray arrayWithArray:_cityDic[@"1"]];
+    _provinceArr = [NSMutableArray arrayWithArray:_cityDic[@"1"]];
 }
 
 -(void)cannelOrConfirm:(UIButton*)sender{
@@ -82,26 +84,64 @@
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0) {
+        if (!_provinceArr) {
+            _provinceArr = [NSMutableArray array];
+        }
+        return _provinceArr.count;
+    }else if(component == 1){
+        if (!_cityArr) {
+            _cityArr = [NSMutableArray array];
+        }
         return _cityArr.count;
-    }
-    
-    if (self.selectedCityDic) {
-        return 3;
     }else{
-        return 0;
+        if (!_areaArr) {
+            _areaArr = [NSMutableArray array];
+        }
+        return _areaArr.count;
     }
-    
 }
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if (component == 0) {
+        if (_provinceArr.count == 0) {
+            return @"--";
+        }
+        return [[_provinceArr objectAtIndex:row] objectForKey:@"f_description"];
+    }else if(component == 1){
+        if (_provinceArr.count == 0) {
+            return @"--";
+        }
         return [[_cityArr objectAtIndex:row] objectForKey:@"f_description"];
+    }else{
+        if (_areaArr.count == 0) {
+            return @"--";
+        }
+        return [[_areaArr objectAtIndex:row] objectForKey:@"f_description"];
     }
-    NSArray*array=@[@"男",@"女",@"未知"];
-    return array[row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (component == 0) {
+        NSString * province = [[_provinceArr objectAtIndex:row] objectForKey:@"f_description"];
+        NSString * provinceID = [[_provinceArr objectAtIndex:row] objectForKey:@"f_id"];
+        [_selectedCityDic setObject:province forKey:@"province"];
+        [_selectedCityDic setObject:provinceID forKey:@"provinceID"];
+        
+        _cityArr = _cityDic[provinceID];
+        [pickerView reloadAllComponents];
+    }else if(component == 1){
+        NSString * city = [[_cityArr objectAtIndex:row] objectForKey:@"f_description"];
+        NSString * cityID = [[_cityArr objectAtIndex:row] objectForKey:@"f_id"];
+        [_selectedCityDic setObject:city forKey:@"city"];
+        [_selectedCityDic setObject:cityID forKey:@"cityID"];
     
+        _areaArr = _cityDic[cityID];
+        [pickerView reloadAllComponents];
+    }else{
+        NSString * area = [[_areaArr objectAtIndex:row] objectForKey:@"f_description"];
+        NSString * areaID = [[_areaArr objectAtIndex:row] objectForKey:@"f_id"];
+        [_selectedCityDic setObject:area forKey:@"area"];
+        [_selectedCityDic setObject:areaID forKey:@"areaID"];
+    }
 }
 
 //- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *){
