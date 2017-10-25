@@ -23,6 +23,7 @@
 #import "BBSDragRotationPresentViewController.h"
 #import "BBSStockViewController.h"
 #import "BBSFaceViewController.h"
+#import "BBSCustomPickerViewController.h"
 
 @interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -46,7 +47,7 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"弧度选择栏",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
@@ -219,6 +220,12 @@
             }else{
                 NSLog(@"iOS11前不可用");
             }
+        }
+            break;
+        case 12:
+        {
+            BBSCustomPickerViewController * customPickerVC = [[BBSCustomPickerViewController alloc]init];
+            [self presentViewController:customPickerVC animated:YES completion:nil];
         }
             break;
         default:

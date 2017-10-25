@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949631F4D8B0A00B2DD0A /* BBSSwift.swift */; };
+		181EDB931FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */; };
+		181EDB941FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */; };
+		181EDB971FA0BDF000FCF5D8 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EDB951FA0BDF000FCF5D8 /* DatePickerView.m */; };
+		181EDB9A1FA0C8EC00FCF5D8 /* BBSChooseCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EDB981FA0C8EB00FCF5D8 /* BBSChooseCityView.m */; };
+		181EDB9C1FA0C98500FCF5D8 /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181EDB9B1FA0C98500FCF5D8 /* Setting.plist */; };
 		1825F7B21F4FB7F5001F5463 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E01F4FB7F5001F5463 /* Animator.swift */; };
 		1825F7B31F4FB7F5001F5463 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E11F4FB7F5001F5463 /* ChartAnimationEasing.swift */; };
 		1825F7B41F4FB7F5001F5463 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825F6E31F4FB7F5001F5463 /* BarChartView.swift */; };
@@ -209,6 +214,14 @@
 /* Begin PBXFileReference section */
 		181949631F4D8B0A00B2DD0A /* BBSSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSSwift.swift; sourceTree = "<group>"; };
 		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
+		181EDB901FA0BBF900FCF5D8 /* BBSCustomPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSCustomPickerViewController.h; sourceTree = "<group>"; };
+		181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSCustomPickerViewController.m; sourceTree = "<group>"; };
+		181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSCustomPickerViewController.xib; sourceTree = "<group>"; };
+		181EDB951FA0BDF000FCF5D8 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		181EDB961FA0BDF000FCF5D8 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		181EDB981FA0C8EB00FCF5D8 /* BBSChooseCityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSChooseCityView.m; sourceTree = "<group>"; };
+		181EDB991FA0C8EB00FCF5D8 /* BBSChooseCityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSChooseCityView.h; sourceTree = "<group>"; };
+		181EDB9B1FA0C98500FCF5D8 /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
 		1825F6E01F4FB7F5001F5463 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		1825F6E11F4FB7F5001F5463 /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnimationEasing.swift; sourceTree = "<group>"; };
 		1825F6E31F4FB7F5001F5463 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
@@ -435,6 +448,7 @@
 		183FB9831F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BarItemEndgeFixEleven.h"; sourceTree = "<group>"; };
 		183FB9841F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BarItemEndgeFixEleven.m"; sourceTree = "<group>"; };
 		183FB9861F7BA0D900D61E74 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		183FB9AD1F7BA67100D61E74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		186F23231F60E20300C9E244 /* BBSFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSFaceViewController.h; sourceTree = "<group>"; };
 		186F23241F60E20300C9E244 /* BBSFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSFaceViewController.m; sourceTree = "<group>"; };
 		186F23261F611E3100C9E244 /* UIImage+JWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JWImage.h"; sourceTree = "<group>"; };
@@ -462,6 +476,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181EDB8F1FA0BB5A00FCF5D8 /* BBSCustomPicker */ = {
+			isa = PBXGroup;
+			children = (
+				181EDB9B1FA0C98500FCF5D8 /* Setting.plist */,
+				181EDB991FA0C8EB00FCF5D8 /* BBSChooseCityView.h */,
+				181EDB981FA0C8EB00FCF5D8 /* BBSChooseCityView.m */,
+				181EDB961FA0BDF000FCF5D8 /* DatePickerView.h */,
+				181EDB951FA0BDF000FCF5D8 /* DatePickerView.m */,
+				181EDB901FA0BBF900FCF5D8 /* BBSCustomPickerViewController.h */,
+				181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */,
+				181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */,
+			);
+			path = BBSCustomPicker;
+			sourceTree = "<group>";
+		};
 		1825F6D31F4FB7F5001F5463 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +891,7 @@
 		1825F85A1F4FB84D001F5463 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				181EDB8F1FA0BB5A00FCF5D8 /* BBSCustomPicker */,
 				1825F85B1F4FB84D001F5463 /* BBSAnimatedTransition */,
 				1825F8621F4FB84D001F5463 /* BBSDownload */,
 				1825F86F1F4FB84D001F5463 /* BBSDragRotationPresentViewController.h */,
@@ -964,6 +994,7 @@
 				1825F6D31F4FB7F5001F5463 /* Library */,
 				1825F85A1F4FB84D001F5463 /* VC */,
 				18C235481F42E56100553864 /* Assets.xcassets */,
+				183FB9AD1F7BA67100D61E74 /* art.scnassets */,
 				18C2353C1F42E56100553864 /* Supporting Files */,
 			);
 			path = NxhTest;
@@ -1047,8 +1078,10 @@
 				1825F8501F4FB7F6001F5463 /* TZImagePickerController.bundle in Resources */,
 				1825F8471F4FB7F6001F5463 /* Fragment.png in Resources */,
 				1825F8891F4FB84D001F5463 /* BBSDownloadViewController.xib in Resources */,
+				181EDB941FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib in Resources */,
 				1825F8461F4FB7F6001F5463 /* Fire.png in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
+				181EDB9C1FA0C98500FCF5D8 /* Setting.plist in Resources */,
 				1825F8481F4FB7F6001F5463 /* Smoke.png in Resources */,
 				1825F8851F4FB84D001F5463 /* BBSDownloadingTableViewCell.xib in Resources */,
 			);
@@ -1097,6 +1130,7 @@
 				1825F80B1F4FB7F5001F5463 /* LineChartDataProvider.swift in Sources */,
 				1825F80C1F4FB7F5001F5463 /* ScatterChartDataProvider.swift in Sources */,
 				1825F83A1F4FB7F5001F5463 /* LTCharacterLimbo.swift in Sources */,
+				181EDB9A1FA0C8EC00FCF5D8 /* BBSChooseCityView.m in Sources */,
 				1825F7F31F4FB7F5001F5463 /* DataApproximator.swift in Sources */,
 				1825F8211F4FB7F5001F5463 /* Renderer.swift in Sources */,
 				1825F81E1F4FB7F5001F5463 /* LineScatterCandleRadarRenderer.swift in Sources */,
@@ -1146,6 +1180,7 @@
 				1825F7E81F4FB7F5001F5463 /* IBarChartDataSet.swift in Sources */,
 				1825F8411F4FB7F6001F5463 /* LTMorphingLabel+Fall.swift in Sources */,
 				1825F8391F4FB7F5001F5463 /* LTCharacterDiffResult.swift in Sources */,
+				181EDB931FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m in Sources */,
 				1825F80E1F4FB7F5001F5463 /* AnimatedViewPortJob.swift in Sources */,
 				1825F7B51F4FB7F5001F5463 /* BarLineChartViewBase.swift in Sources */,
 				1825F88A1F4FB84D001F5463 /* BBSDragRotationPresentViewController.m in Sources */,
@@ -1166,6 +1201,7 @@
 				1825F7D61F4FB7F5001F5463 /* CandleChartDataSet.swift in Sources */,
 				1825F7F51F4FB7F5001F5463 /* DefaultFillFormatter.swift in Sources */,
 				1825F7FB1F4FB7F5001F5463 /* BarHighlighter.swift in Sources */,
+				181EDB971FA0BDF000FCF5D8 /* DatePickerView.m in Sources */,
 				1825F88F1F4FB84D001F5463 /* BBSURLSessionViewController.m in Sources */,
 				186F232B1F611E3100C9E244 /* UIImageView+JWImageView.m in Sources */,
 				1825F84D1F4FB7F6001F5463 /* TZAssetCell.m in Sources */,
