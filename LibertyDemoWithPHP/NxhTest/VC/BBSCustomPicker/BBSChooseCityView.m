@@ -63,6 +63,25 @@
     NSDictionary * dataDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     _cityDic = [NSMutableDictionary dictionaryWithDictionary:dataDic[@"CityArr"]];
     _provinceArr = [NSMutableArray arrayWithArray:_cityDic[@"1"]];
+    
+    NSString * province = [[_provinceArr objectAtIndex:0] objectForKey:@"f_description"];
+    NSString * provinceID = [[_provinceArr objectAtIndex:0] objectForKey:@"f_id"];
+    [_selectedCityDic setObject:province forKey:@"province"];
+    [_selectedCityDic setObject:provinceID forKey:@"provinceID"];
+    
+    _cityArr = _cityDic[provinceID];
+
+    NSString * city = [[_cityArr objectAtIndex:0] objectForKey:@"f_description"];
+    NSString * cityID = [[_cityArr objectAtIndex:0] objectForKey:@"f_id"];
+    [_selectedCityDic setObject:city forKey:@"city"];
+    [_selectedCityDic setObject:cityID forKey:@"cityID"];
+    
+    _areaArr = _cityDic[cityID];
+
+    NSString * area = [[_areaArr objectAtIndex:0] objectForKey:@"f_description"];
+    NSString * areaID = [[_areaArr objectAtIndex:0] objectForKey:@"f_id"];
+    [_selectedCityDic setObject:area forKey:@"area"];
+    [_selectedCityDic setObject:areaID forKey:@"areaID"];
 }
 
 -(void)cannelOrConfirm:(UIButton*)sender{
@@ -121,26 +140,32 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     if (component == 0) {
-        NSString * province = [[_provinceArr objectAtIndex:row] objectForKey:@"f_description"];
-        NSString * provinceID = [[_provinceArr objectAtIndex:row] objectForKey:@"f_id"];
-        [_selectedCityDic setObject:province forKey:@"province"];
-        [_selectedCityDic setObject:provinceID forKey:@"provinceID"];
-        
-        _cityArr = _cityDic[provinceID];
-        [pickerView reloadAllComponents];
+        if (_provinceArr.count>row) {
+            NSString * province = [[_provinceArr objectAtIndex:row] objectForKey:@"f_description"];
+            NSString * provinceID = [[_provinceArr objectAtIndex:row] objectForKey:@"f_id"];
+            [_selectedCityDic setObject:province forKey:@"province"];
+            [_selectedCityDic setObject:provinceID forKey:@"provinceID"];
+            
+            _cityArr = _cityDic[provinceID];
+            [pickerView reloadAllComponents];
+        }
     }else if(component == 1){
-        NSString * city = [[_cityArr objectAtIndex:row] objectForKey:@"f_description"];
-        NSString * cityID = [[_cityArr objectAtIndex:row] objectForKey:@"f_id"];
-        [_selectedCityDic setObject:city forKey:@"city"];
-        [_selectedCityDic setObject:cityID forKey:@"cityID"];
-    
-        _areaArr = _cityDic[cityID];
-        [pickerView reloadAllComponents];
+        if (_cityArr.count>row) {
+            NSString * city = [[_cityArr objectAtIndex:row] objectForKey:@"f_description"];
+            NSString * cityID = [[_cityArr objectAtIndex:row] objectForKey:@"f_id"];
+            [_selectedCityDic setObject:city forKey:@"city"];
+            [_selectedCityDic setObject:cityID forKey:@"cityID"];
+            
+            _areaArr = _cityDic[cityID];
+            [pickerView reloadAllComponents];
+        }
     }else{
-        NSString * area = [[_areaArr objectAtIndex:row] objectForKey:@"f_description"];
-        NSString * areaID = [[_areaArr objectAtIndex:row] objectForKey:@"f_id"];
-        [_selectedCityDic setObject:area forKey:@"area"];
-        [_selectedCityDic setObject:areaID forKey:@"areaID"];
+        if (_areaArr.count>row) {
+            NSString * area = [[_areaArr objectAtIndex:row] objectForKey:@"f_description"];
+            NSString * areaID = [[_areaArr objectAtIndex:row] objectForKey:@"f_id"];
+            [_selectedCityDic setObject:area forKey:@"area"];
+            [_selectedCityDic setObject:areaID forKey:@"areaID"];
+        }
     }
 }
 

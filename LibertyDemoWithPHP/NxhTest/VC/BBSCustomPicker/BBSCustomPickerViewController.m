@@ -56,13 +56,11 @@
                 [alertController addAction:cancelBtn];
                 [self presentViewController:alertController animated:YES completion:nil];
                 return ;
-            }else{
-                [weakSelf dismissViewControllerAnimated:YES completion:nil];
             }
         };
         
         datePicker.cannelBlock = ^(){
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+//            [weakSelf dismissViewControllerAnimated:YES completion:nil];
         };
         
         self.datepicker.frame=CGRectMake(0, SCREENHEIGHT -215, SCREENWIDTH, 215);
@@ -115,7 +113,7 @@
         };
         
         self.citypicker.touchCancelBlock = ^(){
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+//            [weakSelf dismissViewControllerAnimated:YES completion:nil];
         };
     }
     
