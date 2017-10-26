@@ -170,10 +170,12 @@
     }
 }
 
-//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *){
-//    CoreTextArcView *arcViewTest = [[CoreTextArcView alloc] initWithFrame:arcBgView.bounds font:[UIFont systemFontOfSize:20] text:@"弧度半径200张角45" radius:200 arcSize:45 color:[UIColor redColor]];
-//    arcViewTest.backgroundColor = [UIColor clearColor];
-//    [arcBgView addSubview:arcViewTest];
+//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view{
+//    
+//    NSString * titleStr = [self pickerView:pickerView titleForRow:row forComponent:component];
+//    CoreTextArcView *arcViewTest = [[CoreTextArcView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 30.f) font:[UIFont systemFontOfSize:20] text:titleStr radius:0 arcSize:20 color:[UIColor blackColor]];
+//    
+//    return arcViewTest;
 //}
 
 @end

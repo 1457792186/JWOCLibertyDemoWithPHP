@@ -52,6 +52,18 @@
     return self;
 }
 
+- (void)coreTxetSetFont:(UIFont *)font text:(NSString *)text radius:(float)radius arcSize:(float)arcSize color:(UIColor *)color{
+    self.font = font;
+    self.text = text;
+    self.radius = radius;
+    self.showsGlyphBounds = NO;
+    self.showsLineMetrics = NO;
+    self.dimsSubstitutedGlyphs = NO;
+    self.color = color;
+    self.arcSize = arcSize;
+    self.shiftH = self.shiftV = 0.0f;
+}
+
 typedef struct GlyphArcInfo {
     CGFloat         width;
     CGFloat         angle;  // in radians

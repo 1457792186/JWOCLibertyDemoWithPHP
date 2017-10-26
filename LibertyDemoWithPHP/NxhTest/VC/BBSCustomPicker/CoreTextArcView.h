@@ -40,4 +40,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame font:(UIFont *)font text:(NSString *)text radius:(float)radius arcSize:(float)arcSize color:(UIColor *)color;
 
+- (void)coreTxetSetFont:(UIFont *)font text:(NSString *)text radius:(float)radius arcSize:(float)arcSize color:(UIColor *)color;
+
 @end
