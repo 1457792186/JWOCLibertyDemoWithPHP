@@ -200,6 +200,7 @@
 		1825F88F1F4FB84D001F5463 /* BBSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87A1F4FB84D001F5463 /* BBSURLSessionViewController.m */; };
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
+		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		183FB97D1F7B9ED200D61E74 /* BBSARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */; };
 		183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
 		186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23241F60E20300C9E244 /* BBSFaceViewController.m */; };
@@ -441,6 +442,8 @@
 		1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSWeightChangeVC.m; sourceTree = "<group>"; };
 		1825F87D1F4FB84D001F5463 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1825F87E1F4FB84D001F5463 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
+		183ED1321FA170FC004ADB39 /* CoreTextArcView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextArcView.m; sourceTree = "<group>"; };
 		183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSARViewController.h; sourceTree = "<group>"; };
 		183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSARViewController.m; sourceTree = "<group>"; };
 		183FB97F1F7B9F0600D61E74 /* BiggerTouchBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiggerTouchBtn.h; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				181EDB901FA0BBF900FCF5D8 /* BBSCustomPickerViewController.h */,
 				181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */,
 				181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */,
+				183ED1311FA170FC004ADB39 /* CoreTextArcView.h */,
+				183ED1321FA170FC004ADB39 /* CoreTextArcView.m */,
 			);
 			path = BBSCustomPicker;
 			sourceTree = "<group>";
@@ -1238,6 +1243,7 @@
 				1825F7C91F4FB7F5001F5463 /* XAxis.swift in Sources */,
 				181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */,
 				186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */,
+				183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */,
 				1825F7F71F4FB7F5001F5463 /* IAxisValueFormatter.swift in Sources */,
 				1825F8241F4FB7F5001F5463 /* CircleShapeRenderer.swift in Sources */,
 				1825F7D71F4FB7F5001F5463 /* ChartData.swift in Sources */,

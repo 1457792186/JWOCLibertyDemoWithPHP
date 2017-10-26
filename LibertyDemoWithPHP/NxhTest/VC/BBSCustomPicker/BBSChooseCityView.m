@@ -7,6 +7,7 @@
 //
 
 #import "BBSChooseCityView.h"
+#import "CoreTextArcView.h"
 
 @interface BBSChooseCityView()<UIPickerViewDelegate,UIPickerViewDataSource>
 
@@ -170,7 +171,9 @@
 }
 
 //- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *){
-//
+//    CoreTextArcView *arcViewTest = [[CoreTextArcView alloc] initWithFrame:arcBgView.bounds font:[UIFont systemFontOfSize:20] text:@"弧度半径200张角45" radius:200 arcSize:45 color:[UIColor redColor]];
+//    arcViewTest.backgroundColor = [UIColor clearColor];
+//    [arcBgView addSubview:arcViewTest];
 //}
 
 @end
