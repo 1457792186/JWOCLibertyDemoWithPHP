@@ -242,6 +242,7 @@
 		181CA4521FC41E380025198C /* BBSSpeechRecognitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSSpeechRecognitionVC.h; sourceTree = "<group>"; };
 		181CA4531FC41E380025198C /* BBSSpeechRecognitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSSpeechRecognitionVC.m; sourceTree = "<group>"; };
 		181CA4551FC41F630025198C /* BBSSpeechRecognitionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSSpeechRecognitionVC.xib; sourceTree = "<group>"; };
+		181CA4571FC42E360025198C /* 录音.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "录音.m4a"; sourceTree = "<group>"; };
 		181EDB901FA0BBF900FCF5D8 /* BBSCustomPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSCustomPickerViewController.h; sourceTree = "<group>"; };
 		181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSCustomPickerViewController.m; sourceTree = "<group>"; };
 		181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSCustomPickerViewController.xib; sourceTree = "<group>"; };
@@ -1067,6 +1068,7 @@
 		18C2353C1F42E56100553864 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				181CA4571FC42E360025198C /* 录音.m4a */,
 				18C2354A1F42E56100553864 /* LaunchScreen.storyboard */,
 				18C2354D1F42E56100553864 /* Info.plist */,
 				18C2353D1F42E56100553864 /* main.m */,
