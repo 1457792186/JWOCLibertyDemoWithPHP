@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="recordButton" destination="hxm-ee-Fmm" id="6Cz-Os-FA8"/>
                 <outlet property="resultStringTextView" destination="Rfe-fM-Pvc" id="3Hf-Oz-iha"/>
+                <outlet property="view" destination="iN0-l3-epB" id="epg-ad-wlA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
