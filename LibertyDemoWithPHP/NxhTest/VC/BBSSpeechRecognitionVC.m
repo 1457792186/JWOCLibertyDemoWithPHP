@@ -33,7 +33,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    if (IOS10_OR_LATER) {
+    if (!IOS10_OR_LATER) {
         [self dismissViewControllerAnimated:YES completion:nil];
         return;
     }
