@@ -24,6 +24,7 @@
 #define Iphone6p (IPhone && mainScreenHeight >= 736.0&& mainScreenHeight<=800.0 ? YES : NO)
 #define IphoneX  (IPad==NO && mainScreenHeight >= 812.0 ? YES : NO)
 
+#define IOS10_OR_LATER    ( [[UIDevice currentDevice].systemVersion floatValue] >= 10.0 )
 #define IOS11_OR_LATER    ( [[UIDevice currentDevice].systemVersion floatValue] >= 11.0 )
 
 #endif /* JWTestPCH_pch */

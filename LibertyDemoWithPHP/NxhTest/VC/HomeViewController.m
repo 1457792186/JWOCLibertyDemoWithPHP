@@ -24,6 +24,7 @@
 #import "BBSStockViewController.h"
 #import "BBSFaceViewController.h"
 #import "BBSCustomPickerViewController.h"
+#import "BBSSpeechRecognitionVC.h"
 
 @interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -47,7 +48,7 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"弧度选择栏",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"多级选择栏",@"原生语音识别",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
@@ -207,13 +208,13 @@
         }
             break;
         case 10:
-        {
+        {//原生人脸动态识别
             BBSFaceViewController * faceVC = [[BBSFaceViewController alloc]init];
             [self presentViewController:faceVC animated:YES completion:nil];
         }
             break;
         case 11:
-        {
+        {//AR测试-Target中添加，原文件仅参考
             BBSARViewController * arVC = [[BBSARViewController alloc]init];
             if (IOS11_OR_LATER) {
                 [self presentViewController:arVC animated:YES completion:nil];
@@ -223,9 +224,15 @@
         }
             break;
         case 12:
-        {
+        {//多级选择栏
             BBSCustomPickerViewController * customPickerVC = [[BBSCustomPickerViewController alloc]init];
             [self presentViewController:customPickerVC animated:YES completion:nil];
+        }
+            break;
+        case 13:
+        {//原生语音识别
+            BBSSpeechRecognitionVC * speechRecognitionVC = [[BBSSpeechRecognitionVC alloc]init];
+            [self presentViewController:speechRecognitionVC animated:YES completion:nil];
         }
             break;
         default:

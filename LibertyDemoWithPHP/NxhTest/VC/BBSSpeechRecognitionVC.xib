@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBSSpeechRecognitionVC">
+            <connections>
+                <outlet property="recordButton" destination="hxm-ee-Fmm" id="6Cz-Os-FA8"/>
+                <outlet property="resultStringTextView" destination="Rfe-fM-Pvc" id="3Hf-Oz-iha"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="识别结果:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DL-FG-Sk9">
+                    <rect key="frame" x="16" y="20" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54M-Bo-Mnq">
+                    <rect key="frame" x="20" y="603" width="335" height="44"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.80000000000000004" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BZd-KZ-OUB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="本地识别">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="recognizeLocalAudioFile:" destination="-1" eventType="touchUpInside" id="x79-uz-glQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxm-ee-Fmm">
+                    <rect key="frame" x="20" y="540" width="335" height="44"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.80000000000000004" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="slY-fX-ais"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="录音识别">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="recordButtonClicked:" destination="-1" eventType="touchUpInside" id="E95-eC-SpR"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rfe-fM-Pvc">
+                    <rect key="frame" x="30" y="71" width="315" height="439"/>
+                    <color key="backgroundColor" red="0.85844581632149464" green="0.92145264148712158" blue="0.71136691665047624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="54M-Bo-Mnq" firstAttribute="top" secondItem="hxm-ee-Fmm" secondAttribute="bottom" constant="19" id="6TX-Sf-bs2"/>
+                <constraint firstItem="Rfe-fM-Pvc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="9jT-2n-UgE"/>
+                <constraint firstItem="1DL-FG-Sk9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Emi-bz-Aih"/>
+                <constraint firstAttribute="bottom" secondItem="54M-Bo-Mnq" secondAttribute="bottom" constant="20" id="Ezd-CS-RAZ"/>
+                <constraint firstItem="Rfe-fM-Pvc" firstAttribute="top" secondItem="1DL-FG-Sk9" secondAttribute="bottom" constant="30" id="JTK-ca-h0M"/>
+                <constraint firstAttribute="trailing" secondItem="Rfe-fM-Pvc" secondAttribute="trailing" constant="30" id="M74-lP-Iqd"/>
+                <constraint firstItem="hxm-ee-Fmm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Rcj-lA-lkh"/>
+                <constraint firstItem="54M-Bo-Mnq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="UsW-hI-zdE"/>
+                <constraint firstItem="hxm-ee-Fmm" firstAttribute="top" secondItem="Rfe-fM-Pvc" secondAttribute="bottom" constant="30" id="Vky-Xd-Frh"/>
+                <constraint firstAttribute="trailing" secondItem="hxm-ee-Fmm" secondAttribute="trailing" constant="20" id="fTv-Z0-NTe"/>
+                <constraint firstItem="1DL-FG-Sk9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="wnT-i0-yog"/>
+                <constraint firstAttribute="trailing" secondItem="54M-Bo-Mnq" secondAttribute="trailing" constant="20" id="wsj-0m-U4v"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

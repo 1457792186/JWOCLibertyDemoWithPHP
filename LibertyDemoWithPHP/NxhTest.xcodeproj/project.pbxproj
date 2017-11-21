@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		181949641F4D8B0A00B2DD0A /* BBSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181949631F4D8B0A00B2DD0A /* BBSSwift.swift */; };
+		181CA4391FC41C440025198C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CA4381FC41C440025198C /* AppDelegate.m */; };
+		181CA43B1FC41C440025198C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 181CA43A1FC41C440025198C /* art.scnassets */; };
+		181CA43E1FC41C440025198C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CA43D1FC41C440025198C /* ViewController.m */; };
+		181CA4411FC41C440025198C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181CA43F1FC41C440025198C /* Main.storyboard */; };
+		181CA4431FC41C440025198C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181CA4421FC41C440025198C /* Assets.xcassets */; };
+		181CA4461FC41C440025198C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181CA4441FC41C440025198C /* LaunchScreen.storyboard */; };
+		181CA4491FC41C440025198C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CA4481FC41C440025198C /* main.m */; };
+		181CA44D1FC41C8A0025198C /* BBSARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */; };
+		181CA4501FC41CAB0025198C /* BBSARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CA44E1FC41CAA0025198C /* BBSARViewController.m */; };
+		181CA4511FC41CDD0025198C /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
+		181CA4541FC41E380025198C /* BBSSpeechRecognitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CA4531FC41E380025198C /* BBSSpeechRecognitionVC.m */; };
+		181CA4561FC41F630025198C /* BBSSpeechRecognitionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181CA4551FC41F630025198C /* BBSSpeechRecognitionVC.xib */; };
 		181EDB931FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */; };
 		181EDB941FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */; };
 		181EDB971FA0BDF000FCF5D8 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EDB951FA0BDF000FCF5D8 /* DatePickerView.m */; };
@@ -201,7 +213,6 @@
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
-		183FB97D1F7B9ED200D61E74 /* BBSARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */; };
 		183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
 		186F23251F60E20300C9E244 /* BBSFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23241F60E20300C9E244 /* BBSFaceViewController.m */; };
 		186F232A1F611E3100C9E244 /* UIImage+JWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F23271F611E3100C9E244 /* UIImage+JWImage.m */; };
@@ -215,6 +226,22 @@
 /* Begin PBXFileReference section */
 		181949631F4D8B0A00B2DD0A /* BBSSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSSwift.swift; sourceTree = "<group>"; };
 		181B90271F46D84B00A4C971 /* JWTestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTestPCH.pch; sourceTree = "<group>"; };
+		181CA4351FC41C440025198C /* NxhARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxhARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		181CA4371FC41C440025198C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		181CA4381FC41C440025198C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		181CA43A1FC41C440025198C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		181CA43C1FC41C440025198C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		181CA43D1FC41C440025198C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		181CA4401FC41C440025198C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181CA4421FC41C440025198C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		181CA4451FC41C440025198C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		181CA4471FC41C440025198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181CA4481FC41C440025198C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		181CA44E1FC41CAA0025198C /* BBSARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBSARViewController.m; path = NxhARTest/BBSARViewController.m; sourceTree = SOURCE_ROOT; };
+		181CA44F1FC41CAB0025198C /* BBSARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBSARViewController.h; path = NxhARTest/BBSARViewController.h; sourceTree = SOURCE_ROOT; };
+		181CA4521FC41E380025198C /* BBSSpeechRecognitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSSpeechRecognitionVC.h; sourceTree = "<group>"; };
+		181CA4531FC41E380025198C /* BBSSpeechRecognitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSSpeechRecognitionVC.m; sourceTree = "<group>"; };
+		181CA4551FC41F630025198C /* BBSSpeechRecognitionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSSpeechRecognitionVC.xib; sourceTree = "<group>"; };
 		181EDB901FA0BBF900FCF5D8 /* BBSCustomPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSCustomPickerViewController.h; sourceTree = "<group>"; };
 		181EDB911FA0BBF900FCF5D8 /* BBSCustomPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSCustomPickerViewController.m; sourceTree = "<group>"; };
 		181EDB921FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSCustomPickerViewController.xib; sourceTree = "<group>"; };
@@ -468,6 +495,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		181CA4321FC41C440025198C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CA4511FC41CDD0025198C /* ARKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18C235361F42E56100553864 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +514,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181CA4361FC41C440025198C /* NxhARTest */ = {
+			isa = PBXGroup;
+			children = (
+				181CA4371FC41C440025198C /* AppDelegate.h */,
+				181CA4381FC41C440025198C /* AppDelegate.m */,
+				181CA43A1FC41C440025198C /* art.scnassets */,
+				181CA43C1FC41C440025198C /* ViewController.h */,
+				181CA43D1FC41C440025198C /* ViewController.m */,
+				183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */,
+				183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */,
+				181CA43F1FC41C440025198C /* Main.storyboard */,
+				181CA4421FC41C440025198C /* Assets.xcassets */,
+				181CA4441FC41C440025198C /* LaunchScreen.storyboard */,
+				181CA4471FC41C440025198C /* Info.plist */,
+				181CA4481FC41C440025198C /* main.m */,
+			);
+			path = NxhARTest;
+			sourceTree = "<group>";
+		};
 		181EDB8F1FA0BB5A00FCF5D8 /* BBSCustomPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,8 +971,11 @@
 				1825F87E1F4FB84D001F5463 /* HomeViewController.m */,
 				186F23231F60E20300C9E244 /* BBSFaceViewController.h */,
 				186F23241F60E20300C9E244 /* BBSFaceViewController.m */,
-				183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */,
-				183FB97C1F7B9ED200D61E74 /* BBSARViewController.m */,
+				181CA44F1FC41CAB0025198C /* BBSARViewController.h */,
+				181CA44E1FC41CAA0025198C /* BBSARViewController.m */,
+				181CA4521FC41E380025198C /* BBSSpeechRecognitionVC.h */,
+				181CA4531FC41E380025198C /* BBSSpeechRecognitionVC.m */,
+				181CA4551FC41F630025198C /* BBSSpeechRecognitionVC.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -978,6 +1035,7 @@
 			isa = PBXGroup;
 			children = (
 				18C2353B1F42E56100553864 /* NxhTest */,
+				181CA4361FC41C440025198C /* NxhARTest */,
 				18C2353A1F42E56100553864 /* Products */,
 				183FB9851F7BA0D800D61E74 /* Frameworks */,
 			);
@@ -987,6 +1045,7 @@
 			isa = PBXGroup;
 			children = (
 				18C235391F42E56100553864 /* NxhTest.app */,
+				181CA4351FC41C440025198C /* NxhARTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1020,6 +1079,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		181CA4341FC41C440025198C /* NxhARTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181CA44C1FC41C440025198C /* Build configuration list for PBXNativeTarget "NxhARTest" */;
+			buildPhases = (
+				181CA4311FC41C440025198C /* Sources */,
+				181CA4321FC41C440025198C /* Frameworks */,
+				181CA4331FC41C440025198C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NxhARTest;
+			productName = NxhARTest;
+			productReference = 181CA4351FC41C440025198C /* NxhARTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18C235381F42E56100553864 /* NxhTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18C235501F42E56100553864 /* Build configuration list for PBXNativeTarget "NxhTest" */;
@@ -1043,9 +1119,14 @@
 		18C235311F42E56100553864 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = UgoMedia;
 				TargetAttributes = {
+					181CA4341FC41C440025198C = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 5D5Z473WJW;
+						ProvisioningStyle = Automatic;
+					};
 					18C235381F42E56100553864 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 5D5Z473WJW;
@@ -1067,11 +1148,23 @@
 			projectRoot = "";
 			targets = (
 				18C235381F42E56100553864 /* NxhTest */,
+				181CA4341FC41C440025198C /* NxhARTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		181CA4331FC41C440025198C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CA43B1FC41C440025198C /* art.scnassets in Resources */,
+				181CA4461FC41C440025198C /* LaunchScreen.storyboard in Resources */,
+				181CA4431FC41C440025198C /* Assets.xcassets in Resources */,
+				181CA4411FC41C440025198C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18C235371F42E56100553864 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1084,6 +1177,7 @@
 				1825F8471F4FB7F6001F5463 /* Fragment.png in Resources */,
 				1825F8891F4FB84D001F5463 /* BBSDownloadViewController.xib in Resources */,
 				181EDB941FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib in Resources */,
+				181CA4561FC41F630025198C /* BBSSpeechRecognitionVC.xib in Resources */,
 				1825F8461F4FB7F6001F5463 /* Fire.png in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
 				181EDB9C1FA0C98500FCF5D8 /* Setting.plist in Resources */,
@@ -1095,6 +1189,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		181CA4311FC41C440025198C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CA43E1FC41C440025198C /* ViewController.m in Sources */,
+				181CA44D1FC41C8A0025198C /* BBSARViewController.m in Sources */,
+				181CA4491FC41C440025198C /* main.m in Sources */,
+				181CA4391FC41C440025198C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18C235351F42E56100553864 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1147,6 +1252,7 @@
 				1825F7CD1F4FB7F5001F5463 /* BarChartDataEntry.swift in Sources */,
 				1825F7C51F4FB7F5001F5463 /* Legend.swift in Sources */,
 				1825F7CA1F4FB7F5001F5463 /* YAxis.swift in Sources */,
+				181CA4541FC41E380025198C /* BBSSpeechRecognitionVC.m in Sources */,
 				1825F8401F4FB7F5001F5463 /* LTMorphingLabel+Evaporate.swift in Sources */,
 				1825F7D41F4FB7F5001F5463 /* CandleChartData.swift in Sources */,
 				1825F7B71F4FB7F5001F5463 /* CandleStickChartView.swift in Sources */,
@@ -1235,6 +1341,7 @@
 				1825F7D11F4FB7F5001F5463 /* BubbleChartData.swift in Sources */,
 				1825F8071F4FB7F5001F5463 /* BubbleChartDataProvider.swift in Sources */,
 				1825F7DA1F4FB7F5001F5463 /* ChartDataSet.swift in Sources */,
+				181CA4501FC41CAB0025198C /* BBSARViewController.m in Sources */,
 				1825F8131F4FB7F5001F5463 /* AxisRendererBase.swift in Sources */,
 				1825F8141F4FB7F5001F5463 /* BarChartRenderer.swift in Sources */,
 				1825F7E51F4FB7F5001F5463 /* RadarChartDataSet.swift in Sources */,
@@ -1275,7 +1382,6 @@
 				1825F8571F4FB7F6001F5463 /* UIColor+HexColor.m in Sources */,
 				1825F8431F4FB7F6001F5463 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1825F7FA1F4FB7F5001F5463 /* IValueFormatter.swift in Sources */,
-				183FB97D1F7B9ED200D61E74 /* BBSARViewController.m in Sources */,
 				1825F7B21F4FB7F5001F5463 /* Animator.swift in Sources */,
 				1825F81B1F4FB7F5001F5463 /* LegendRenderer.swift in Sources */,
 				1825F8351F4FB7F5001F5463 /* Transformer.swift in Sources */,
@@ -1294,6 +1400,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		181CA43F1FC41C440025198C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181CA4401FC41C440025198C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		181CA4441FC41C440025198C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181CA4451FC41C440025198C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		18C2354A1F42E56100553864 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1305,6 +1427,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		181CA44A1FC41C440025198C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D5Z473WJW;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NxhARTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhARTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		181CA44B1FC41C440025198C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D5Z473WJW;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NxhARTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.NxhARTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		18C2354E1F42E56100553864 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1315,7 +1487,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1323,7 +1497,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1364,7 +1542,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1372,7 +1552,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1392,6 +1576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1438,6 +1623,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		181CA44C1FC41C440025198C /* Build configuration list for PBXNativeTarget "NxhARTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181CA44A1FC41C440025198C /* Debug */,
+				181CA44B1FC41C440025198C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18C235341F42E56100553864 /* Build configuration list for PBXProject "NxhTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
