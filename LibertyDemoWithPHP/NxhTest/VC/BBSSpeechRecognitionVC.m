@@ -89,6 +89,7 @@
         else
         {
             weakSelf.resultStringTextView.text = result.bestTranscription.formattedString;
+            [JWTools strWithCopy:weakSelf.resultStringTextView.text];
         }
     }];
     
@@ -139,6 +140,7 @@
         BOOL isFinal = NO;
         if (result) {
             strongSelf.resultStringTextView.text = result.bestTranscription.formattedString;
+            [JWTools strWithCopy:weakSelf.resultStringTextView.text];
             isFinal = result.isFinal;
         }
         if (error || isFinal) {
