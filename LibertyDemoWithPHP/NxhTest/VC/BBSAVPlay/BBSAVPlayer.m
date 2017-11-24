@@ -10,7 +10,6 @@
 #import <MediaPlayer/MPNowPlayingInfoCenter.h>
 
 @interface BBSAVPlayer()
-@property (nonatomic, assign) CGFloat musicProgre;
 @property (nonatomic, strong) id timeObserve;
 
 @end
