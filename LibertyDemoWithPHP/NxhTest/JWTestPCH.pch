@@ -29,4 +29,9 @@
 #define IOS10_OR_LATER    ( [[UIDevice currentDevice].systemVersion floatValue] >= 10.0 )
 #define IOS11_OR_LATER    ( [[UIDevice currentDevice].systemVersion floatValue] >= 11.0 )
 
+
+#define MUSIC_PLAY  @"MusicPlayAction"
+#define MUSIC_PAUSE @"MusicPauseAction"
+
+
 #endif /* JWTestPCH_pch */

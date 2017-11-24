@@ -9,7 +9,15 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 
+#import "BBSAVAudio.h"
+
+#import "BBSAVPlayer.h"
+
 @interface AppDelegate ()
+
+@property (assign, nonatomic) UIBackgroundTaskIdentifier bgTaskId;
+@property (assign, nonatomic) BOOL isReStarMusic;//再启动音乐
+
 
 @end
 
@@ -23,19 +31,55 @@
     self.window.rootViewController = [[HomeViewController alloc]init];
     [self.window makeKeyAndVisible];
     
+    //    初始化音乐中断事件状态
+    _isReStarMusic = NO;
+    
     return YES;
 }
 
+//实现获取backgroundPlayerID
++(UIBackgroundTaskIdentifier)backgroundPlayerID:(UIBackgroundTaskIdentifier)backTaskId{
+    //设置并激活音频会话类别
+    //    AVAudioSession *session=[AVAudioSession sharedInstance];
+    //    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    //    [session setActive:YES error:nil];
+    //允许应用程序接收远程控制
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    //设置后台任务ID
+    UIBackgroundTaskIdentifier newTaskId = UIBackgroundTaskInvalid;
+    newTaskId=[[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
+    if(newTaskId!=UIBackgroundTaskInvalid&&backTaskId!=UIBackgroundTaskInvalid){
+        [[UIApplication sharedApplication] endBackgroundTask:backTaskId];
+    }
+    return newTaskId;
+}
+
+//处理音乐中断事件
+-(void)handleMusicInterreption:(NSNotification *)notification{
+    NSDictionary *info = notification.userInfo;
+    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    if (type == AVAudioSessionInterruptionTypeBegan) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:MUSIC_PAUSE object:nil userInfo:nil];
+    }else{
+        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+        if (options == AVAudioSessionInterruptionOptionShouldResume&&_isReStarMusic) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:MUSIC_PLAY object:nil userInfo:nil];
+        }
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    //    注册backgroundPlayerID以处理音乐中断事件
+    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:NULL];
+    _bgTaskId = [AppDelegate backgroundPlayerID:_bgTaskId];
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //    重置音乐中断事件状态
+    if ([BBSAVAudio shareMusicTool].player.isPlaying) {
+        _isReStarMusic = YES;
+    }
 }
 
 
@@ -45,13 +89,15 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //    重置音乐中断事件状态
+    _isReStarMusic = NO;
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 
 @end

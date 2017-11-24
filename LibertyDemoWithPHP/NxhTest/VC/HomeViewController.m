@@ -25,6 +25,7 @@
 #import "BBSFaceViewController.h"
 #import "BBSCustomPickerViewController.h"
 #import "BBSSpeechRecognitionVC.h"
+#import "BBSAVPlayViewController.h"
 
 @interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -48,7 +49,7 @@
     [_bgImageView setUserInteractionEnabled:YES];
     [self.view addSubview:_bgImageView];
     
-    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"多级选择栏",@"原生语音识别",@"背景图毛玻璃"]];
+    _nameArray = [NSMutableArray arrayWithArray:@[@"图表绘制",@"网络连接",@"网络连接本地",@"图片选择器",@"断点下载",@"文本特效",@"拖拽视图",@"自定义转场",@"转场&拖拽",@"股票绘制",@"人脸识别",@"AR",@"多级选择栏",@"原生语音识别",@"音视频",@"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
         [_dataArray addObject:[NSString stringWithFormat:@"BG_IMG%zi",(i%7)]];
@@ -233,6 +234,12 @@
         {//原生语音识别
             BBSSpeechRecognitionVC * speechRecognitionVC = [[BBSSpeechRecognitionVC alloc]init];
             [self presentViewController:speechRecognitionVC animated:YES completion:nil];
+        }
+            break;
+        case 14:
+        {//音视频集合
+            BBSAVPlayViewController * avVC = [[BBSAVPlayViewController alloc]init];
+            [self presentViewController:avVC animated:YES completion:nil];
         }
             break;
         default:
