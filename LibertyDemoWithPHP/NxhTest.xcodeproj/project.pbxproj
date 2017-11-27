@@ -215,6 +215,8 @@
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
+		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
+		184A15F91FCBEAAD008FF593 /* BBSSimpleDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */; };
 		185399631FC7E22400238C11 /* BBSAVPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185399611FC7E22400238C11 /* BBSAVPlayViewController.m */; };
 		185399641FC7E22400238C11 /* BBSAVPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185399621FC7E22400238C11 /* BBSAVPlayViewController.xib */; };
 		1853998A1FC7E8C700238C11 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853996E1FC7E8C700238C11 /* NSData+ImageContentType.m */; };
@@ -502,6 +504,10 @@
 		183FB9841F7B9F0600D61E74 /* UIButton+BarItemEndgeFixEleven.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BarItemEndgeFixEleven.m"; sourceTree = "<group>"; };
 		183FB9861F7BA0D900D61E74 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		183FB9AD1F7BA67100D61E74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		184A15F41FCBE964008FF593 /* BBSDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSDrawingViewController.h; sourceTree = "<group>"; };
+		184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSDrawingViewController.m; sourceTree = "<group>"; };
+		184A15F71FCBEAAD008FF593 /* BBSSimpleDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSSimpleDrawView.h; sourceTree = "<group>"; };
+		184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSSimpleDrawView.m; sourceTree = "<group>"; };
 		185399601FC7E22400238C11 /* BBSAVPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSAVPlayViewController.h; sourceTree = "<group>"; };
 		185399611FC7E22400238C11 /* BBSAVPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSAVPlayViewController.m; sourceTree = "<group>"; };
 		185399621FC7E22400238C11 /* BBSAVPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBSAVPlayViewController.xib; sourceTree = "<group>"; };
@@ -1016,6 +1022,7 @@
 		1825F85A1F4FB84D001F5463 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				184A15F31FCBE923008FF593 /* BBSCharts */,
 				1853995F1FC7E1F000238C11 /* BBSAVPlay */,
 				181EDB8F1FA0BB5A00FCF5D8 /* BBSCustomPicker */,
 				1825F85B1F4FB84D001F5463 /* BBSAnimatedTransition */,
@@ -1098,6 +1105,17 @@
 				183FB9861F7BA0D900D61E74 /* ARKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		184A15F31FCBE923008FF593 /* BBSCharts */ = {
+			isa = PBXGroup;
+			children = (
+				184A15F71FCBEAAD008FF593 /* BBSSimpleDrawView.h */,
+				184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */,
+				184A15F41FCBE964008FF593 /* BBSDrawingViewController.h */,
+				184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */,
+			);
+			path = BBSCharts;
 			sourceTree = "<group>";
 		};
 		1853995F1FC7E1F000238C11 /* BBSAVPlay */ = {
@@ -1385,6 +1403,7 @@
 				1825F82B1F4FB7F5001F5463 /* XAxisRenderer.swift in Sources */,
 				1825F88B1F4FB84D001F5463 /* BBSDragViewController.m in Sources */,
 				1825F7CD1F4FB7F5001F5463 /* BarChartDataEntry.swift in Sources */,
+				184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */,
 				1825F7C51F4FB7F5001F5463 /* Legend.swift in Sources */,
 				1825F7CA1F4FB7F5001F5463 /* YAxis.swift in Sources */,
 				1853998B1FC7E8C700238C11 /* SDImageCache.m in Sources */,
@@ -1511,6 +1530,7 @@
 				1825F8521F4FB7F6001F5463 /* TZPhotoPickerController.m in Sources */,
 				185399961FC7E8C700238C11 /* UIImageView+WebCache.m in Sources */,
 				1825F8271F4FB7F5001F5463 /* SquareShapeRenderer.swift in Sources */,
+				184A15F91FCBEAAD008FF593 /* BBSSimpleDrawView.m in Sources */,
 				185399921FC7E8C700238C11 /* UIButton+WebCache.m in Sources */,
 				1825F7FE1F4FB7F5001F5463 /* Highlight.swift in Sources */,
 				1825F8811F4FB84D001F5463 /* JWPercentDrivenInteractiveTransition.m in Sources */,
