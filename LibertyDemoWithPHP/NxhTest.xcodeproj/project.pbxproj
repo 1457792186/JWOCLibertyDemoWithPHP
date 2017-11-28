@@ -214,7 +214,6 @@
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
-		183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FB9861F7BA0D900D61E74 /* ARKit.framework */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
 		184A15F91FCBEAAD008FF593 /* BBSSimpleDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */; };
 		185399631FC7E22400238C11 /* BBSAVPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185399611FC7E22400238C11 /* BBSAVPlayViewController.m */; };
@@ -576,7 +575,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183FB9871F7BA0D900D61E74 /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

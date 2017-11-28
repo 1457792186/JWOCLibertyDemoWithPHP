@@ -28,6 +28,11 @@
 #import "BBSAVPlayViewController.h"
 #import "BBSDrawingViewController.h"
 
+//iOS应用内评分
+#ifdef __IPHONE_10_3
+#import <StoreKit/StoreKit.h>
+#endif
+
 
 @interface HomeViewController ()<iCarouselDataSource, iCarouselDelegate,TZImagePickerControllerDelegate>
 
@@ -35,6 +40,9 @@
 @property (strong, nonatomic)NSMutableArray * dataArray;
 @property (strong, nonatomic)NSMutableArray * nameArray;
 @property (strong, nonatomic)UIImageView * bgImageView;
+
+@property (nonatomic,strong)NSTimer * timer;
+@property (nonatomic,assign)NSInteger time;
 
 @end
 
@@ -82,6 +90,9 @@
     _carousel.centerItemWhenSelected = YES;//选中时居中
     
     [self.view addSubview:_carousel];
+    
+    //    销毁，重置计时器
+    [self reSetTimer];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -94,6 +105,56 @@
         _carousel.currentItemIndex = centerIdx>0?centerIdx:0;
     });
 }
+
+#pragma mark - NSTimer & StoreKit
+
+- (void)reSetTimer{
+    //    销毁，重置计时器
+    if(self.timer&&self.timer.isValid) {
+        [self.timer invalidate];
+    }
+    self.timer = nil;
+    self.time = 0;
+    
+    //    创建计时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeMaxAction) userInfo:nil repeats:YES];
+}
+
+- (void)timeMaxAction{
+    //  到计时时间事件
+    if (self.time >= 3*60) {
+        UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self reSetTimer];
+        }];
+        
+        UIAlertAction * commentAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self reSetTimer];
+            [self commentApp];
+        }];
+        
+        UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"评分" message:@"请评分" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC addAction:cancelAction];
+        [alertVC addAction:commentAction];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }else{
+        self.time++;
+    }
+}
+
+- (void)commentApp{
+//    应用内评论App
+#ifdef __IPHONE_10_3
+    if([SKStoreReviewController respondsToSelector:@selector(requestReview)]) {// iOS 10.3 以上支持
+        [SKStoreReviewController requestReview];
+        return;
+    }
+#endif
+    
+    // iOS 10.3 之前的使用这个
+    NSString  * nsStringToOpen = [NSString  stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@?action=write-review",@"APPID"];//替换为对应的APPID
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:nsStringToOpen]];
+}
+
 
 #pragma mark - iCarouselDataSource
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
