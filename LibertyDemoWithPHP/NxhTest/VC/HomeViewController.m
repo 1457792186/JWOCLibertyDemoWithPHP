@@ -349,4 +349,192 @@
     }
 }
 
+#pragma mark- GCD
+- (void)gcdShow{
+//    可以使用dispatch_queue_create来创建对象，需要传入两个参数，第一个参数表示队列的唯一标识符，用于DEBUG，可为空；第二个参数用来识别是串行队列还是并行队列。DISPATCH_QUEUE_SERIAL表示串行队列，DISPATCH_QUEUE_CONCURRENT表示并行队列
+//    对于并行队列，还可以使用dispatch_get_global_queue来创建全局并行队列。GCD默认提供了全局的并行队列，需要传入两个参数。第一个参数表示队列优先级，一般用DISPATCH_QUEUE_PRIORITY_DEFAULT。第二个参数暂时没用，用0即可
+    
+    // 串行队列的创建方法
+    dispatch_queue_t queue= dispatch_queue_create("test.queue", DISPATCH_QUEUE_SERIAL);
+    // 并行队列的创建方法
+    dispatch_queue_t queues= dispatch_queue_create("test.queue", DISPATCH_QUEUE_CONCURRENT);
+    // 同步执行任务创建方法
+    dispatch_sync(queue, ^{
+        NSLog(@"%@",[NSThread currentThread]);    // 这里放任务代码
+    });
+    // 异步执行任务创建方法
+    dispatch_async(queue, ^{
+        NSLog(@"%@",[NSThread currentThread]);    // 这里放任务代码
+    });
+    
+    /*
+     GCD只需两步，既然有两种队列，两种任务执行方式，那么就有了四种不同的组合方式。这四种不同的组合方式是
+     并行队列 + 同步执行
+     并行队列 + 异步执行
+     串行队列 + 同步执行
+     串行队列 + 异步执行
+     
+     实际上，还有一种特殊队列是主队列，那样就有六种不同的组合方式dispatch_queue_t queue = dispatch_get_main_queue();
+     主队列 + 同步执行
+     主队列 + 异步执行
+     
+     
+     不同组合方式区别:
+                    并行队列                    串行队列                       主队列
+     同步(sync)    没有开启新线程，串行执行任务    没有开启新线程，串行执行任务       没有开启新线程，串行执行任务
+     异步(async)   有开启新线程，并行执行任务      有开启新线程(1条)，串行执行任务    没有开启新线程，串行执行任务
+     */
+}
+
+- (void)gcdDemo{//仅举例一个
+//    并行队列 + 异步执行
+//    可同时开启多线程，任务交替执行
+    NSLog(@"asyncConcurrent---begin");
+    
+    dispatch_queue_t queue= dispatch_queue_create("test.queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 2; ++i) {
+            NSLog(@"1------%@",[NSThread currentThread]);
+        }
+    });
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 2; ++i) {
+            NSLog(@"2------%@",[NSThread currentThread]);
+        }
+    });
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 2; ++i) {
+            NSLog(@"3------%@",[NSThread currentThread]);
+        }
+    });
+    
+    NSLog(@"asyncConcurrent---end");
+}
+
+- (void)gcdBarrier{
+//    1.GCD的栅栏方法 dispatch_barrier_async
+    dispatch_queue_t queue = dispatch_queue_create("12312312", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"----1-----%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"----2-----%@", [NSThread currentThread]);
+    });
+    
+    dispatch_barrier_async(queue, ^{
+        NSLog(@"----barrier-----%@", [NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"----3-----%@", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"----4-----%@", [NSThread currentThread]);
+    });
+//    在执行完栅栏前面的操作之后，才执行栅栏操作，最后再执行栅栏后边的操作
+}
+- (void)gcdAfter{
+    //2.dispatch_after延迟操作
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 2秒后异步执行这里的代码...
+    });
+}
+
+- (void)gcdOnce{
+    //3.dispatch_once只执行一次，单例内常用
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // 只执行1次的代码(这里面默认是线程安全的)
+    });
+}
+
+- (void)gcdApply{
+//    4.快速迭代方法 dispatch_apply
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_apply(6, queue, ^(size_t index) {
+        NSLog(@"%zd------%@",index, [NSThread currentThread]);
+    });
+//    可以同时遍历多个数字
+}
+
+- (void)gcdGroup{
+//    5.GCD的队列组 dispatch_group
+//    有时候会有这样的需求：分别异步执行2个耗时操作，然后当2个耗时操作都执行完毕后再回到主线程执行操作。这时候可以用到GCD的队列组。
+//    可以先把任务放到队列中，然后将队列放入队列组中。
+//    调用队列组的dispatch_group_notify回到主线程执行操作。
+    
+    dispatch_group_t group =  dispatch_group_create();
+    
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 执行1个耗时的异步操作
+    });
+    
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 执行1个耗时的异步操作
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        // 等前面的异步操作都执行完毕后，回到主线程...
+    });
+}
+
+- (void)gcdSemaphore{
+//    6.GCD中的信号量
+/*
+ 信号量就是一个资源计数器，对信号量有两个操作来达到互斥，分别是P和V操作。 一般情况是这样进行临界访问或互斥访问的： 设信号量值为1， 当一个进程1运行是，使用资源，进行P操作，即对信号量值减1，也就是资源数少了1个。这是信号量值为0。系统中规定当信号量值为0是，必须等待，知道信号量值不为零才能继续操作。 这时如果进程2想要运行，那么也必须进行P操作，但是此时信号量为0，所以无法减1，即不能P操作，也就阻塞。这样就到到了进程1排他访问。 当进程1运行结束后，释放资源，进行V操作。资源数重新加1，这是信号量的值变为1. 这时进程2发现资源数不为0，信号量能进行P操作了，立即执行P操作。信号量值又变为0.次数进程2咱有资源，排他访问资源。 这就是信号量来控制互斥的原理
+ 
+ ** 简单来讲 信号量为0则阻塞线程，大于0则不会阻塞。则我们通过改变信号量的值，来控制是否阻塞线程，从而达到线程同步。**
+ 
+    在GCD中有三个函数是semaphore的操作，
+    分别是：
+            dispatch_semaphore_create 创建一个semaphore
+            dispatch_semaphore_signal 发送一个信号
+            dispatch_semaphore_wait 等待信号
+    简单的介绍一下这三个函数
+            dispatch_semaphore_create有一个整形的参数，可以理解为信号的总量;
+            dispatch_semaphore_signal是发送一个信号，自然会让信号总量加1;
+            dispatch_semaphore_wait等待信号，当信号总量少于0的时候就会一直等待，否则就可以正常的执行，并让信号总量-1;
+            根据这样的原理，便可以快速的创建一个并发控制来同步任务和有限资源访问控制
+ */
+    // 创建队列组
+    dispatch_group_t group = dispatch_group_create();
+    // 创建信号量，并且设置值为10
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    for (int i = 0; i < 100; i++)
+    {
+        //关键：
+        // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_group_async(group, queue, ^{
+            NSLog(@"%i",i);
+            sleep(2);
+            // 每次发送信号则semaphore会+1，
+            dispatch_semaphore_signal(semaphore);
+        });
+    }
+}
+//6.GCD中的信号量Demo2
+- (void)gcdSemaphore2{
+    /*
+     __block BOOL isok = NO;
+     
+     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+     Engine *engine = [[Engine alloc] init];
+     [engine queryCompletion:^(BOOL isOpen) {
+     isok = isOpen;
+     dispatch_semaphore_signal(sema);
+     } onError:^(int errorCode, NSString *errorMessage) {
+     isok = NO;
+     dispatch_semaphore_signal(sema);
+     }];
+     
+     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+     // todo what you want to do after net callback
+     */
+}
+
 @end
