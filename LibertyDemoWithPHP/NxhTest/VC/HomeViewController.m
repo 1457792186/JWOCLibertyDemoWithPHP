@@ -27,6 +27,7 @@
 #import "BBSSpeechRecognitionVC.h"
 #import "BBSAVPlayViewController.h"
 #import "BBSDrawingViewController.h"
+#import "BBSCoreDataViewController.h"
 
 //iOS应用内评分
 #ifdef __IPHONE_10_3
@@ -75,6 +76,7 @@
                                                   @"原生语音识别",
                                                   @"音视频",
                                                   @"原生绘图",
+                                                  @"CoreData",
                                                   @"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
@@ -325,6 +327,12 @@
         {//原生绘图
             BBSDrawingViewController * drawVC = [[BBSDrawingViewController alloc]init];
             [self presentViewController:drawVC animated:YES completion:nil];
+        }
+            break;
+        case 16:
+        {//CoreData
+            BBSCoreDataViewController * dataVC = [[BBSCoreDataViewController alloc]init];
+            [self presentViewController:dataVC animated:YES completion:nil];
         }
             break;
         default:
