@@ -15,12 +15,12 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"UploadEntity"];
 }
 
-@dynamic imageData;
-@dynamic urlPath;
 @dynamic fileName;
 @dynamic fileSize;
 @dynamic fileType;
 @dynamic finishStatus;
+@dynamic imageData;
 @dynamic time;
+@dynamic urlPath;
 
 @end

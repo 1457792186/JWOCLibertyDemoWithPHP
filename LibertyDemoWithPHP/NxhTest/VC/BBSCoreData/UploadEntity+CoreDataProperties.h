@@ -16,13 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<UploadEntity *> *)fetchRequest;
 
-@property (nullable, nonatomic, retain) NSData *imageData;
-@property (nullable, nonatomic, copy) NSString *urlPath;
 @property (nullable, nonatomic, copy) NSString *fileName;
 @property (nullable, nonatomic, copy) NSString *fileSize;
 @property (nonatomic) int16_t fileType;
 @property (nonatomic) int16_t finishStatus;
+@property (nullable, nonatomic, retain) NSData *imageData;
 @property (nonatomic) int64_t time;
+@property (nullable, nonatomic, copy) NSString *urlPath;
 
 @end
 

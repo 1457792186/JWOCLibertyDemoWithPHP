@@ -213,8 +213,8 @@
 		1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87C1F4FB84D001F5463 /* BBSWeightChangeVC.m */; };
 		1825F8911F4FB84D001F5463 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F87E1F4FB84D001F5463 /* HomeViewController.m */; };
 		182D8F641FDFC63F00D24555 /* JWCoreDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F631FDFC63F00D24555 /* JWCoreDataAPI.m */; };
-		182D8F771FDFC78400D24555 /* UploadEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F751FDFC78400D24555 /* UploadEntity+CoreDataClass.m */; };
-		182D8F781FDFC78400D24555 /* UploadEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F761FDFC78400D24555 /* UploadEntity+CoreDataProperties.m */; };
+		182D8F7D1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F7B1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m */; };
+		182D8F7E1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */; };
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
@@ -498,10 +498,10 @@
 		1825F87E1F4FB84D001F5463 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		182D8F621FDFC63F00D24555 /* JWCoreDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCoreDataAPI.h; sourceTree = "<group>"; };
 		182D8F631FDFC63F00D24555 /* JWCoreDataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCoreDataAPI.m; sourceTree = "<group>"; };
-		182D8F731FDFC78400D24555 /* UploadEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
-		182D8F741FDFC78400D24555 /* UploadEntity+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadEntity+CoreDataClass.h"; sourceTree = "<group>"; };
-		182D8F751FDFC78400D24555 /* UploadEntity+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataClass.m"; sourceTree = "<group>"; };
-		182D8F761FDFC78400D24555 /* UploadEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		182D8F791FDFC95E00D24555 /* UploadEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		182D8F7A1FDFC95E00D24555 /* UploadEntity+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadEntity+CoreDataClass.h"; sourceTree = "<group>"; };
+		182D8F7B1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		1837CE1D1FC65A9C0038B4F4 /* JWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTools.h; sourceTree = "<group>"; };
 		1837CE1E1FC65A9C0038B4F4 /* JWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTools.m; sourceTree = "<group>"; };
 		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
@@ -1186,10 +1186,10 @@
 		1862C6721FDFB4640003F8CD /* BBSCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				182D8F731FDFC78400D24555 /* UploadEntity+CoreDataProperties.h */,
-				182D8F741FDFC78400D24555 /* UploadEntity+CoreDataClass.h */,
-				182D8F751FDFC78400D24555 /* UploadEntity+CoreDataClass.m */,
-				182D8F761FDFC78400D24555 /* UploadEntity+CoreDataProperties.m */,
+				182D8F791FDFC95E00D24555 /* UploadEntity+CoreDataProperties.h */,
+				182D8F7A1FDFC95E00D24555 /* UploadEntity+CoreDataClass.h */,
+				182D8F7B1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m */,
+				182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */,
 				1862C6731FDFB4A60003F8CD /* BBSCoreDataViewController.h */,
 				1862C6741FDFB4A60003F8CD /* BBSCoreDataViewController.m */,
 				1862C6761FDFB50A0003F8CD /* BBSDataModel.xcdatamodeld */,
@@ -1407,7 +1407,7 @@
 				185399A01FC7F65600238C11 /* BBSMovieViewController.m in Sources */,
 				1825F7CF1F4FB7F5001F5463 /* BarLineScatterCandleBubbleChartData.swift in Sources */,
 				1825F8581F4FB7F6001F5463 /* ZFDownloadManager.m in Sources */,
-				182D8F771FDFC78400D24555 /* UploadEntity+CoreDataClass.m in Sources */,
+				182D8F7D1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m in Sources */,
 				1825F7B91F4FB7F5001F5463 /* CombinedChartView.swift in Sources */,
 				186F232A1F611E3100C9E244 /* UIImage+JWImage.m in Sources */,
 				1825F8111F4FB7F5001F5463 /* ViewPortJob.swift in Sources */,
@@ -1454,7 +1454,7 @@
 				1825F83F1F4FB7F5001F5463 /* LTMorphingLabel+Burn.swift in Sources */,
 				1825F8101F4FB7F5001F5463 /* MoveViewJob.swift in Sources */,
 				1825F7F21F4FB7F5001F5463 /* IScatterChartDataSet.swift in Sources */,
-				182D8F781FDFC78400D24555 /* UploadEntity+CoreDataProperties.m in Sources */,
+				182D8F7E1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m in Sources */,
 				1825F8551F4FB7F6001F5463 /* TZVideoPlayerController.m in Sources */,
 				1825F8341F4FB7F5001F5463 /* Platform.swift in Sources */,
 				1825F8361F4FB7F5001F5463 /* TransformerHorizontalBarChart.swift in Sources */,

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+//把model的Codegen设置为Manual/None，否则会报错
+
 @interface JWCoreDataAPI : NSObject
 
 /**
