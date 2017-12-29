@@ -12,17 +12,30 @@
 
 @property (nonatomic,assign)BBSSimpleLayerAnimationType animationType;
 @property (nonatomic,strong)CAShapeLayer * drawLayer;
+@property (nonatomic,strong)NSTimer * timer;
 
 @end
 
 @implementation BBSSimpleDrawView
+
 
 - (void)addTouchAction{
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchesAction)];
     [self addGestureRecognizer:tap];
 }
 - (void)touchesAction{
+    if (self.timer&&self.timer.isValid) {
+        [self.timer invalidate];
+        self.timer=nil;
+        return;
+    }
+    self.timer=nil;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reDrowLayer) userInfo:nil repeats:YES];
 //    点击后再次动画
+    
+}
+
+- (void)reDrowLayer{
     if (self.drawLayer) {
         [self layerAnimationWithType:self.animationType];
     }
