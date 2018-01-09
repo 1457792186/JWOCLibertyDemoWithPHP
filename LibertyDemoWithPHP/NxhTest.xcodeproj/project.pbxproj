@@ -215,6 +215,8 @@
 		182D8F641FDFC63F00D24555 /* JWCoreDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F631FDFC63F00D24555 /* JWCoreDataAPI.m */; };
 		182D8F7D1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F7B1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m */; };
 		182D8F7E1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */; };
+		183189FF20048E2C0033B2C8 /* BBSRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 183189FE20048E2C0033B2C8 /* BBSRunTime.m */; };
+		18318A0220048EBF0033B2C8 /* BBSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A0120048EBF0033B2C8 /* BBSTest.m */; };
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
@@ -502,6 +504,10 @@
 		182D8F7A1FDFC95E00D24555 /* UploadEntity+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadEntity+CoreDataClass.h"; sourceTree = "<group>"; };
 		182D8F7B1FDFC95E00D24555 /* UploadEntity+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataClass.m"; sourceTree = "<group>"; };
 		182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UploadEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		183189FD20048E2C0033B2C8 /* BBSRunTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSRunTime.h; sourceTree = "<group>"; };
+		183189FE20048E2C0033B2C8 /* BBSRunTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSRunTime.m; sourceTree = "<group>"; };
+		18318A0020048EBF0033B2C8 /* BBSTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSTest.h; sourceTree = "<group>"; };
+		18318A0120048EBF0033B2C8 /* BBSTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSTest.m; sourceTree = "<group>"; };
 		1837CE1D1FC65A9C0038B4F4 /* JWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTools.h; sourceTree = "<group>"; };
 		1837CE1E1FC65A9C0038B4F4 /* JWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTools.m; sourceTree = "<group>"; };
 		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
@@ -1034,6 +1040,7 @@
 		1825F85A1F4FB84D001F5463 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				183189FC20048E070033B2C8 /* BBSRunTime */,
 				1862C6721FDFB4640003F8CD /* BBSCoreData */,
 				184A15F31FCBE923008FF593 /* BBSCharts */,
 				1853995F1FC7E1F000238C11 /* BBSAVPlay */,
@@ -1097,6 +1104,17 @@
 				1825F86E1F4FB84D001F5463 /* BBSDownloadViewController.xib */,
 			);
 			path = BBSDownload;
+			sourceTree = "<group>";
+		};
+		183189FC20048E070033B2C8 /* BBSRunTime */ = {
+			isa = PBXGroup;
+			children = (
+				183189FD20048E2C0033B2C8 /* BBSRunTime.h */,
+				183189FE20048E2C0033B2C8 /* BBSRunTime.m */,
+				18318A0020048EBF0033B2C8 /* BBSTest.h */,
+				18318A0120048EBF0033B2C8 /* BBSTest.m */,
+			);
+			path = BBSRunTime;
 			sourceTree = "<group>";
 		};
 		183FB97E1F7B9F0600D61E74 /* NavButton */ = {
@@ -1457,6 +1475,7 @@
 				182D8F7E1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m in Sources */,
 				1825F8551F4FB7F6001F5463 /* TZVideoPlayerController.m in Sources */,
 				1825F8341F4FB7F5001F5463 /* Platform.swift in Sources */,
+				183189FF20048E2C0033B2C8 /* BBSRunTime.m in Sources */,
 				1825F8361F4FB7F5001F5463 /* TransformerHorizontalBarChart.swift in Sources */,
 				1825F8291F4FB7F5001F5463 /* XShapeRenderer.swift in Sources */,
 				1825F8421F4FB7F6001F5463 /* LTMorphingLabel+Pixelate.swift in Sources */,
@@ -1553,6 +1572,7 @@
 				1825F82F1F4FB7F5001F5463 /* YAxisRendererHorizontalBarChart.swift in Sources */,
 				1825F8171F4FB7F5001F5463 /* CandleStickChartRenderer.swift in Sources */,
 				18C235411F42E56100553864 /* AppDelegate.m in Sources */,
+				18318A0220048EBF0033B2C8 /* BBSTest.m in Sources */,
 				1825F7F11F4FB7F5001F5463 /* IRadarChartDataSet.swift in Sources */,
 				1825F7CC1F4FB7F5001F5463 /* BarChartData.swift in Sources */,
 				1825F87F1F4FB84D001F5463 /* BBSAnimatedTransitionViewController.m in Sources */,
@@ -1791,6 +1811,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5D5Z473WJW;
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1810,6 +1831,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5D5Z473WJW;
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NxhTest/JWTestPCH.pch";
 				INFOPLIST_FILE = NxhTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
