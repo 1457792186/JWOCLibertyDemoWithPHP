@@ -217,6 +217,9 @@
 		182D8F7E1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D8F7C1FDFC95E00D24555 /* UploadEntity+CoreDataProperties.m */; };
 		183189FF20048E2C0033B2C8 /* BBSRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 183189FE20048E2C0033B2C8 /* BBSRunTime.m */; };
 		18318A0220048EBF0033B2C8 /* BBSTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A0120048EBF0033B2C8 /* BBSTest.m */; };
+		18318A142004AD2E0033B2C8 /* NSMutableArray+RangeOutRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A102004AD2D0033B2C8 /* NSMutableArray+RangeOutRunTime.m */; };
+		18318A152004AD2E0033B2C8 /* NSArray+RangeOutRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A132004AD2D0033B2C8 /* NSArray+RangeOutRunTime.m */; };
+		18318A1C2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A1B2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m */; };
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
@@ -508,6 +511,13 @@
 		183189FE20048E2C0033B2C8 /* BBSRunTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSRunTime.m; sourceTree = "<group>"; };
 		18318A0020048EBF0033B2C8 /* BBSTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSTest.h; sourceTree = "<group>"; };
 		18318A0120048EBF0033B2C8 /* BBSTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSTest.m; sourceTree = "<group>"; };
+		18318A102004AD2D0033B2C8 /* NSMutableArray+RangeOutRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+RangeOutRunTime.m"; sourceTree = "<group>"; };
+		18318A112004AD2D0033B2C8 /* NSMutableArray+RangeOutRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+RangeOutRunTime.h"; sourceTree = "<group>"; };
+		18318A122004AD2D0033B2C8 /* NSArray+RangeOutRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RangeOutRunTime.h"; sourceTree = "<group>"; };
+		18318A132004AD2D0033B2C8 /* NSArray+RangeOutRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RangeOutRunTime.m"; sourceTree = "<group>"; };
+		18318A162004AD440033B2C8 /* JWCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWCheck.h; sourceTree = "<group>"; };
+		18318A1A2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+RangeOutRunTime.h"; sourceTree = "<group>"; };
+		18318A1B2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+RangeOutRunTime.m"; sourceTree = "<group>"; };
 		1837CE1D1FC65A9C0038B4F4 /* JWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTools.h; sourceTree = "<group>"; };
 		1837CE1E1FC65A9C0038B4F4 /* JWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTools.m; sourceTree = "<group>"; };
 		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
@@ -1109,12 +1119,27 @@
 		183189FC20048E070033B2C8 /* BBSRunTime */ = {
 			isa = PBXGroup;
 			children = (
+				18318A0F2004AD050033B2C8 /* CommonCrashCheck */,
 				183189FD20048E2C0033B2C8 /* BBSRunTime.h */,
 				183189FE20048E2C0033B2C8 /* BBSRunTime.m */,
 				18318A0020048EBF0033B2C8 /* BBSTest.h */,
 				18318A0120048EBF0033B2C8 /* BBSTest.m */,
 			);
 			path = BBSRunTime;
+			sourceTree = "<group>";
+		};
+		18318A0F2004AD050033B2C8 /* CommonCrashCheck */ = {
+			isa = PBXGroup;
+			children = (
+				18318A162004AD440033B2C8 /* JWCheck.h */,
+				18318A122004AD2D0033B2C8 /* NSArray+RangeOutRunTime.h */,
+				18318A132004AD2D0033B2C8 /* NSArray+RangeOutRunTime.m */,
+				18318A112004AD2D0033B2C8 /* NSMutableArray+RangeOutRunTime.h */,
+				18318A102004AD2D0033B2C8 /* NSMutableArray+RangeOutRunTime.m */,
+				18318A1A2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.h */,
+				18318A1B2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m */,
+			);
+			path = CommonCrashCheck;
 			sourceTree = "<group>";
 		};
 		183FB97E1F7B9F0600D61E74 /* NavButton */ = {
@@ -1397,6 +1422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18318A152004AD2E0033B2C8 /* NSArray+RangeOutRunTime.m in Sources */,
 				1825F8251F4FB7F5001F5463 /* CrossShapeRenderer.swift in Sources */,
 				1825F84A1F4FB7F6001F5463 /* LYSHistogramChart.m in Sources */,
 				1825F8311F4FB7F5001F5463 /* ChartColorTemplates.swift in Sources */,
@@ -1529,6 +1555,7 @@
 				1825F84D1F4FB7F6001F5463 /* TZAssetCell.m in Sources */,
 				1825F7DE1F4FB7F5001F5463 /* LineRadarChartDataSet.swift in Sources */,
 				1825F7F91F4FB7F5001F5463 /* IndexAxisValueFormatter.swift in Sources */,
+				18318A1C2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m in Sources */,
 				1825F7C71F4FB7F5001F5463 /* MarkerImage.swift in Sources */,
 				1825F7F01F4FB7F5001F5463 /* IPieChartDataSet.swift in Sources */,
 				1825F83C1F4FB7F5001F5463 /* LTEmitterView.swift in Sources */,
@@ -1577,6 +1604,7 @@
 				1825F7CC1F4FB7F5001F5463 /* BarChartData.swift in Sources */,
 				1825F87F1F4FB84D001F5463 /* BBSAnimatedTransitionViewController.m in Sources */,
 				1825F7C31F4FB7F5001F5463 /* Description.swift in Sources */,
+				18318A142004AD2E0033B2C8 /* NSMutableArray+RangeOutRunTime.m in Sources */,
 				1825F83E1F4FB7F5001F5463 /* LTMorphingLabel+Anvil.swift in Sources */,
 				1825F84C1F4FB7F6001F5463 /* LYSToolObject.m in Sources */,
 				1825F7E01F4FB7F5001F5463 /* PieChartData.swift in Sources */,
