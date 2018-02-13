@@ -221,6 +221,10 @@
 		18318A152004AD2E0033B2C8 /* NSArray+RangeOutRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A132004AD2D0033B2C8 /* NSArray+RangeOutRunTime.m */; };
 		18318A1C2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18318A1B2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m */; };
 		1837CE1F1FC65A9D0038B4F4 /* JWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837CE1E1FC65A9C0038B4F4 /* JWTools.m */; };
+		183EC1E62032CE06002517F0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183EC1E52032CE06002517F0 /* OpenGLES.framework */; };
+		183EC1E82032CE0C002517F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183EC1E72032CE0C002517F0 /* QuartzCore.framework */; };
+		183EC1EB2032CE30002517F0 /* BBSOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */; };
+		183EC1EE2032D209002517F0 /* BBSOpenGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
 		184A15F91FCBEAAD008FF593 /* BBSSimpleDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */; };
@@ -520,6 +524,12 @@
 		18318A1B2004AE870033B2C8 /* NSMutableDictionary+RangeOutRunTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+RangeOutRunTime.m"; sourceTree = "<group>"; };
 		1837CE1D1FC65A9C0038B4F4 /* JWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTools.h; sourceTree = "<group>"; };
 		1837CE1E1FC65A9C0038B4F4 /* JWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTools.m; sourceTree = "<group>"; };
+		183EC1E52032CE06002517F0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		183EC1E72032CE0C002517F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		183EC1E92032CE30002517F0 /* BBSOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSOpenGLView.h; sourceTree = "<group>"; };
+		183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSOpenGLView.m; sourceTree = "<group>"; };
+		183EC1EC2032D209002517F0 /* BBSOpenGLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSOpenGLViewController.h; sourceTree = "<group>"; };
+		183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSOpenGLViewController.m; sourceTree = "<group>"; };
 		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
 		183ED1321FA170FC004ADB39 /* CoreTextArcView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextArcView.m; sourceTree = "<group>"; };
 		183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSARViewController.h; sourceTree = "<group>"; };
@@ -605,6 +615,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183EC1E82032CE0C002517F0 /* QuartzCore.framework in Frameworks */,
+				183EC1E62032CE06002517F0 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,6 +1062,7 @@
 		1825F85A1F4FB84D001F5463 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				183EC1E42032CDE5002517F0 /* BBSOpenGLES */,
 				183189FC20048E070033B2C8 /* BBSRunTime */,
 				1862C6721FDFB4640003F8CD /* BBSCoreData */,
 				184A15F31FCBE923008FF593 /* BBSCharts */,
@@ -1142,6 +1155,17 @@
 			path = CommonCrashCheck;
 			sourceTree = "<group>";
 		};
+		183EC1E42032CDE5002517F0 /* BBSOpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+				183EC1E92032CE30002517F0 /* BBSOpenGLView.h */,
+				183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */,
+				183EC1EC2032D209002517F0 /* BBSOpenGLViewController.h */,
+				183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */,
+			);
+			path = BBSOpenGLES;
+			sourceTree = "<group>";
+		};
 		183FB97E1F7B9F0600D61E74 /* NavButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1156,6 +1180,8 @@
 		183FB9851F7BA0D800D61E74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				183EC1E72032CE0C002517F0 /* QuartzCore.framework */,
+				183EC1E52032CE06002517F0 /* OpenGLES.framework */,
 				1853996B1FC7E64700238C11 /* AVFoundation.framework */,
 				1853996A1FC7E64000238C11 /* AVKit.framework */,
 				183FB9861F7BA0D900D61E74 /* ARKit.framework */,
@@ -1495,6 +1521,7 @@
 				1825F8371F4FB7F5001F5463 /* ViewPortHandler.swift in Sources */,
 				1825F7BA1F4FB7F5001F5463 /* HorizontalBarChartView.swift in Sources */,
 				1825F8381F4FB7F5001F5463 /* iCarousel.m in Sources */,
+				183EC1EB2032CE30002517F0 /* BBSOpenGLView.m in Sources */,
 				1825F83F1F4FB7F5001F5463 /* LTMorphingLabel+Burn.swift in Sources */,
 				1825F8101F4FB7F5001F5463 /* MoveViewJob.swift in Sources */,
 				1825F7F21F4FB7F5001F5463 /* IScatterChartDataSet.swift in Sources */,
@@ -1567,6 +1594,7 @@
 				1825F7B61F4FB7F5001F5463 /* BubbleChartView.swift in Sources */,
 				1825F8901F4FB84D001F5463 /* BBSWeightChangeVC.m in Sources */,
 				1825F8061F4FB7F5001F5463 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
+				183EC1EE2032D209002517F0 /* BBSOpenGLViewController.m in Sources */,
 				1825F7BE1F4FB7F5001F5463 /* RadarChartView.swift in Sources */,
 				1825F7DD1F4FB7F5001F5463 /* LineChartDataSet.swift in Sources */,
 				1825F8041F4FB7F5001F5463 /* Range.swift in Sources */,

@@ -28,6 +28,7 @@
 #import "BBSAVPlayViewController.h"
 #import "BBSDrawingViewController.h"
 #import "BBSCoreDataViewController.h"
+#import "BBSOpenGLViewController.h"
 
 //iOS应用内评分
 #ifdef __IPHONE_10_3
@@ -77,6 +78,7 @@
                                                   @"音视频",
                                                   @"原生绘图",
                                                   @"CoreData",
+                                                  @"OpenGL",
                                                   @"背景图毛玻璃"]];
     _dataArray = [NSMutableArray array];
     for (int i = 0; i<_nameArray.count; i++) {
@@ -333,6 +335,12 @@
         {//CoreData
             BBSCoreDataViewController * dataVC = [[BBSCoreDataViewController alloc]init];
             [self presentViewController:dataVC animated:YES completion:nil];
+        }
+            break;
+        case 17:
+        {//CoreData
+            BBSOpenGLViewController * openGLVC = [[BBSOpenGLViewController alloc]init];
+            [self presentViewController:openGLVC animated:YES completion:nil];
         }
             break;
         default:
