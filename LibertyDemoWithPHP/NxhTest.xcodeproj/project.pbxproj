@@ -225,6 +225,7 @@
 		183EC1E82032CE0C002517F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183EC1E72032CE0C002517F0 /* QuartzCore.framework */; };
 		183EC1EB2032CE30002517F0 /* BBSOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */; };
 		183EC1EE2032D209002517F0 /* BBSOpenGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */; };
+		183EC1F02032D2F1002517F0 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 183EC1EF2032D2F1002517F0 /* SimpleVertex.glsl */; };
 		183ED1331FA170FC004ADB39 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1321FA170FC004ADB39 /* CoreTextArcView.m */; };
 		184A15F61FCBE964008FF593 /* BBSDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F51FCBE964008FF593 /* BBSDrawingViewController.m */; };
 		184A15F91FCBEAAD008FF593 /* BBSSimpleDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A15F81FCBEAAD008FF593 /* BBSSimpleDrawView.m */; };
@@ -530,6 +531,7 @@
 		183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSOpenGLView.m; sourceTree = "<group>"; };
 		183EC1EC2032D209002517F0 /* BBSOpenGLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSOpenGLViewController.h; sourceTree = "<group>"; };
 		183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBSOpenGLViewController.m; sourceTree = "<group>"; };
+		183EC1EF2032D2F1002517F0 /* SimpleVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
 		183ED1311FA170FC004ADB39 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
 		183ED1321FA170FC004ADB39 /* CoreTextArcView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextArcView.m; sourceTree = "<group>"; };
 		183FB97B1F7B9ED200D61E74 /* BBSARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBSARViewController.h; sourceTree = "<group>"; };
@@ -1162,6 +1164,7 @@
 				183EC1EA2032CE30002517F0 /* BBSOpenGLView.m */,
 				183EC1EC2032D209002517F0 /* BBSOpenGLViewController.h */,
 				183EC1ED2032D209002517F0 /* BBSOpenGLViewController.m */,
+				183EC1EF2032D2F1002517F0 /* SimpleVertex.glsl */,
 			);
 			path = BBSOpenGLES;
 			sourceTree = "<group>";
@@ -1421,6 +1424,7 @@
 				1825F8891F4FB84D001F5463 /* BBSDownloadViewController.xib in Resources */,
 				185399641FC7E22400238C11 /* BBSAVPlayViewController.xib in Resources */,
 				181EDB941FA0BBF900FCF5D8 /* BBSCustomPickerViewController.xib in Resources */,
+				183EC1F02032D2F1002517F0 /* SimpleVertex.glsl in Resources */,
 				181CA4561FC41F630025198C /* BBSSpeechRecognitionVC.xib in Resources */,
 				1825F8461F4FB7F6001F5463 /* Fire.png in Resources */,
 				18C235491F42E56100553864 /* Assets.xcassets in Resources */,
